@@ -35,13 +35,6 @@
     "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nStepping stones scaffold the projects; they are not a separate grade weight. Details are on Assessments and the syllabus."
   },
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Download this page as PDF\nLecture: Monday, Wednesday, Friday, 11:00–11:50 a.m., NR 224.\nLab: Tuesday, 11:00 a.m.–12:50 p.m., BSS 313.\nTerm: August 24–December 11, 2026. Topics marked TBD will be filled as materials are posted. Links go to pages that already exist.\n\n\n\nWeek\nMonday\nTuesday (lab)\nWednesday\nFriday\n\n\n\n\n1\nAug 24Topic TBD\nAug 25Lab 1Stepping stones\nAug 26Topic TBD\nAug 28Topic TBD\n\n\n2\nAug 31Topic TBD\nSep 1Lab TBD\nSep 2Topic TBD\nSep 4Topic TBD\n\n\n3\nSep 7Labor Day — no class\nSep 8Lab 3\nSep 9Topic TBD\nSep 11Topic TBD\n\n\n4\nSep 14Topic TBD\nSep 15Lab TBD\nSep 16Topic TBD\nSep 18Topic TBD\n\n\n5\nSep 21Topic TBD\nSep 22Lab TBD\nSep 23Topic TBD\nSep 25Topic TBD\n\n\n6\nSep 28Topic TBD\nSep 29Lab TBD\nSep 30Topic TBD\nOct 2Topic TBD\n\n\n7\nOct 5Topic TBD\nOct 6Lab TBD\nOct 7Topic TBD\nOct 9Topic TBD\n\n\n8\nOct 12Topic TBD\nOct 13Lab TBD\nOct 14Topic TBD\nOct 16Topic TBD\n\n\n9\nOct 19Topic TBD\nOct 20Lab TBD\nOct 21Topic TBD\nOct 23Topic TBD\n\n\n10\nOct 26Topic TBD\nOct 27Lab TBD\nOct 28Topic TBD\nOct 30Topic TBD\n\n\n11\nNov 2Topic TBD\nNov 3Lab TBD\nNov 4Topic TBD\nNov 6Topic TBD\n\n\n12\nNov 9Topic TBD\nNov 10Lab TBD\nNov 11Veterans Day — no class\nNov 13Topic TBD\n\n\n13\nNov 16Topic TBD\nNov 17Lab TBD\nNov 18Topic TBD\nNov 20Topic TBD\n\n\n14\nNov 23Fall break — no class\nNov 24Fall break — no class\nNov 25Fall break — no class\nNov 27Fall break — no class\n\n\n15\nNov 30Topic TBD\nDec 1Lab TBD\nDec 2Topic TBD\nDec 4Topic TBD\n\n\n16\nDec 7Topic TBD\nDec 8Lab TBD\nDec 9Topic TBD\nDec 11Last class\n\n\n\nFinals week: Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224 — Project 3 presentations (no written final).\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Course Syllabus",
@@ -53,7 +46,7 @@
     "href": "syllabus.html#course-information",
     "title": "Course Syllabus",
     "section": "Course information",
-    "text": "Course information\nCourse Number: DATA 422\nCourse Title: Advanced Data Science Methods and Ethics\nUnits: 4\nSemester: Fall 2026\nMode of Instruction: In person\nPrerequisite: DATA 322\nMinimum grade for major: C-\n\nLecture\nSection: DATA 422-10 (Class Number 42778)\nDays/Time: Monday, Wednesday, Friday, 11:00–11:50 a.m.\nLocation: NR 224\n\n\nLaboratory (Activity)\nSection: DATA 422-11 (Class Number 42779)\nDay/Time: Tuesday, 11:00 a.m.–12:50 p.m.\nLocation: BSS 313\n\n\nProject 3 presentations (final-exam slot)\nFriday, December 18, 2026, 10:20 a.m.–12:10 p.m., NR 224.\n(There is no written final exam.)"
+    "text": "Course information\nCourse Number: DATA 422\nCourse Title: Advanced Data Science Methods and Ethics\nUnits: 4\nSemester: Fall 2026\nMode of Instruction: In person\nPrerequisite: DATA 322\nMinimum grade for major: C-\n\nLecture\nSection: DATA 422-10 (Class Number 42778)\nDays/Time: Monday, Wednesday, Friday, 11:00–11:50 a.m.\nLocation: NR 224\n\n\nLaboratory (Activity)\nSection: DATA 422-11 (Class Number 42779)\nDay/Time: Tuesday, 11:00 a.m.–12:50 p.m.\nLocation: BSS 313\n\n\nProject 3 presentations (final-exam slot)\nFriday, December 18, 2026, 10:20 a.m.–12:10 p.m., NR 224."
   },
   {
     "objectID": "syllabus.html#instructor",
@@ -74,7 +67,7 @@
     "href": "syllabus.html#required-materials",
     "title": "Course Syllabus",
     "section": "Required materials",
-    "text": "Required materials\n\nTextbook: The Hundred-Page Language Model Book (free online), plus readings provided in Canvas.\nTechnology: A computer for work outside lab (personal, Data Science program, or library checkout). If you need a laptop, consider Cal Poly Humboldt’s Reusable Office Supply Exchange (R.O.S.E.) program."
+    "text": "Required materials\n\nTextbook: The Hundred-Page Language Model Book (free online), plus readings provided in Canvas.\nTextbook: How to Argue and Win Every Time: At Home, at Work, in Court, Everywhere by Gerry Spence (used copies can be purchased very cheaply)\nTechnology: A computer for work outside lab (personal, Data Science program, or library checkout). If you need a laptop, consider Cal Poly Humboldt’s Reusable Office Supply Exchange (R.O.S.E.) program."
   },
   {
     "objectID": "syllabus.html#course-load",
@@ -88,7 +81,7 @@
     "href": "syllabus.html#assessment-and-grading",
     "title": "Course Syllabus",
     "section": "Assessment and grading",
-    "text": "Assessment and grading\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\n\nHow assessments work\n\nThere are no midterms and no written final exam.\nProject 3 includes a presentation in the university final-exam time slot (Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224).\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets). They are not a separate grade weight; they support the project grades.\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\nLetter grades (nearest percent): 93–100 (A); 90–92 (A-); 87–89 (B+); 83–86 (B); 80–82 (B-); 77–79 (C+); 73–76 (C); 70–72 (C-); 60–69 (D); below 60 (F).\nSee Assessments for links as materials are posted."
+    "text": "Assessment and grading\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\n\nHow assessments work\n\nProject 3 includes a presentation in the university final-exam time slot (Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224).\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets).\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\nLetter grades (nearest percent): 93–100 (A); 90–92 (A-); 87–89 (B+); 83–86 (B); 80–82 (B-); 77–79 (C+); 73–76 (C); 70–72 (C-); 60–69 (D); below 60 (F).\nSee Assessments for links as materials are posted."
   },
   {
     "objectID": "syllabus.html#important-dates",
@@ -109,7 +102,7 @@
     "href": "syllabus.html#missed-or-late-work",
     "title": "Course Syllabus",
     "section": "Missed or late work",
-    "text": "Missed or late work\nPolicies are discussed and agreed upon in the first two weeks of class, then posted on Canvas."
+    "text": "Missed or late work\nQuizzes can be made up in Rosanna’s Office Hours. Project stepping stones or deliverables can be turned in late by making an arrangement with Rosanna. The only exceptions are the deliverables for projects 2 and 3, which will involve class participation for which there is no substitute."
   },
   {
     "objectID": "syllabus.html#academic-integrity",
@@ -137,7 +130,14 @@
     "href": "syllabus.html#learning-outcomes",
     "title": "Course Syllabus",
     "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nProgram / student learning outcomes (summary)\nStudents will demonstrate computational skills to extract and visualize data; statistical knowledge to build models and ensure valid analysis; contemporary data-oriented skills with ethical considerations; and effective communication for diverse audiences.\n\n\nCourse learning outcomes\nUpon successfully completing this course, you will be able to apply advanced data science methods and ethical reasoning in practical case studies spanning privacy, multivariate statistics, big data / cloud computing, and deep learning (details refined as the term’s projects and quizzes are posted)."
+    "text": "Learning outcomes\n\nProgram / student learning outcomes (summary)\nStudents will demonstrate computational skills to extract and visualize data; statistical knowledge to build models and ensure valid analysis; contemporary data-oriented skills with ethical considerations; and effective communication for diverse audiences.\n\n\nCourse learning outcomes\nUpon successfully completing this course, you will be able to apply advanced data science methods and ethical reasoning in practical case studies spanning privacy, multivariate statistics, big data / cloud computing, and deep learning."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Download this page as PDF\nLecture: Monday, Wednesday, Friday, 11:00–11:50 a.m., NR 224.\nLab: Tuesday, 11:00 a.m.–12:50 p.m., BSS 313.\nTerm: August 24–December 11, 2026. Topics marked TBD will be filled as materials are posted. Links go to pages that already exist.\n\n\n\nWeek\nMonday\nTuesday (lab)\nWednesday\nFriday\n\n\n\n\n1\nAug 24Topic TBD\nAug 25Lab 1Stepping stones\nAug 26Topic TBD\nAug 28Topic TBD\n\n\n2\nAug 31Topic TBD\nSep 1Lab TBD\nSep 2Topic TBD\nSep 4Topic TBD\n\n\n3\nSep 7Labor Day — no class\nSep 8Lab 3\nSep 9Topic TBD\nSep 11Topic TBD\n\n\n4\nSep 14Topic TBD\nSep 15Lab TBD\nSep 16Topic TBD\nSep 18Topic TBD\n\n\n5\nSep 21Topic TBD\nSep 22Lab TBD\nSep 23Topic TBD\nSep 25Topic TBD\n\n\n6\nSep 28Topic TBD\nSep 29Lab TBD\nSep 30Topic TBD\nOct 2Topic TBD\n\n\n7\nOct 5Topic TBD\nOct 6Lab TBD\nOct 7Topic TBD\nOct 9Topic TBD\n\n\n8\nOct 12Topic TBD\nOct 13Lab TBD\nOct 14Topic TBD\nOct 16Topic TBD\n\n\n9\nOct 19Topic TBD\nOct 20Lab TBD\nOct 21Topic TBD\nOct 23Topic TBD\n\n\n10\nOct 26Topic TBD\nOct 27Lab TBD\nOct 28Topic TBD\nOct 30Topic TBD\n\n\n11\nNov 2Topic TBD\nNov 3Lab TBD\nNov 4Topic TBD\nNov 6Topic TBD\n\n\n12\nNov 9Topic TBD\nNov 10Lab TBD\nNov 11Veterans Day — no class\nNov 13Topic TBD\n\n\n13\nNov 16Topic TBD\nNov 17Lab TBD\nNov 18Topic TBD\nNov 20Topic TBD\n\n\n14\nNov 23Fall break — no class\nNov 24Fall break — no class\nNov 25Fall break — no class\nNov 27Fall break — no class\n\n\n15\nNov 30Topic TBD\nDec 1Lab TBD\nDec 2Topic TBD\nDec 4Topic TBD\n\n\n16\nDec 7Topic TBD\nDec 8Lab TBD\nDec 9Topic TBD\nDec 11Last class\n\n\n\nFinals week: Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224 — Project 3 presentations (no written final).\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
     "objectID": "assessments.html",
