@@ -33,5 +33,145 @@
     "title": "DATA 422: Advanced Data Science Methods and Ethics",
     "section": "Grading snapshot",
     "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nStepping stones scaffold the projects; they are not a separate grade weight. Details are on Assessments and the syllabus."
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "href": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Course Syllabus",
+    "section": "",
+    "text": "Download this page as PDF"
+  },
+  {
+    "objectID": "syllabus.html#instructor",
+    "href": "syllabus.html#instructor",
+    "title": "Course Syllabus",
+    "section": "Instructor",
+    "text": "Instructor\nInstructor: Dr. Rosanna Overholser\nOffice: BSS 334\nPhone: 707-826-4020\nEmail: rosanna.overholser@humboldt.edu\nPlease use your Cal Poly Humboldt email and check Canvas regularly for course communications."
+  },
+  {
+    "objectID": "syllabus.html#meeting-times-and-student-hours-fall-2025",
+    "href": "syllabus.html#meeting-times-and-student-hours-fall-2025",
+    "title": "Course Syllabus",
+    "section": "Meeting times and student hours (Fall 2025)",
+    "text": "Meeting times and student hours (Fall 2025)\n\n\n\n\n\n\n\nLecture\nMWF 12:00–12:50 PM in BSS 308\n\n\nLab\nTuesday 11:00 AM–12:50 PM in BSS 313\n\n\nStudent hours\nMonday 2:00–3:50 PM and Wednesday 1:00–2:50 PM in BSS 334 (may move to BSS 312 if needed). Happy to meet by appointment—email to find a time."
+  },
+  {
+    "objectID": "syllabus.html#catalog-description",
+    "href": "syllabus.html#catalog-description",
+    "title": "Course Syllabus",
+    "section": "Catalog description",
+    "text": "Catalog description\nThis course provides a treatment of advanced topics in Data Science. Topics include: (i) Privacy and Ethics, (ii) Multivariate Statistics, (iii) Big Data and Cloud Computing, and (iv) Deep Learning. The course will draw from numerous case studies and applications, with a practical rather than theoretical emphasis.\nA minimum grade of C- is required to count toward the Data Science major.\nPrerequisites: DATA 322."
+  },
+  {
+    "objectID": "syllabus.html#required-materials",
+    "href": "syllabus.html#required-materials",
+    "title": "Course Syllabus",
+    "section": "Required materials",
+    "text": "Required materials\n\nTextbook: The Hundred-Page Language Model Book (free online), plus readings provided in Canvas.\nTechnology: A computer for work outside lab (personal, Data Science program, or library checkout). If you need a laptop, consider Cal Poly Humboldt’s Reusable Office Supply Exchange (R.O.S.E.) program."
+  },
+  {
+    "objectID": "syllabus.html#course-load",
+    "href": "syllabus.html#course-load",
+    "title": "Course Syllabus",
+    "section": "Course load",
+    "text": "Course load\nDATA 422 has 3 units of lecture and 1 unit of activity. Expect about 5 hours in class and at least 7 hours out of class each week."
+  },
+  {
+    "objectID": "syllabus.html#assessment-and-grading",
+    "href": "syllabus.html#assessment-and-grading",
+    "title": "Course Syllabus",
+    "section": "Assessment and grading",
+    "text": "Assessment and grading\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\n\nHow assessments work\n\nThere are no midterms and no written final exam.\nProject 3 includes a presentation scheduled in the final-exam time slot.\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets). They are not a separate grade weight; they support the project grades.\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\nLetter grades (nearest percent): 93–100 (A); 90–92 (A-); 87–89 (B+); 83–86 (B); 80–82 (B-); 77–79 (C+); 73–76 (C); 70–72 (C-); 60–69 (D); below 60 (F).\nSee Assessments for links as materials are posted."
+  },
+  {
+    "objectID": "syllabus.html#course-structure",
+    "href": "syllabus.html#course-structure",
+    "title": "Course Syllabus",
+    "section": "Course structure",
+    "text": "Course structure\nMeetings include discussions and small-group activities based on readings distributed beforehand. Projects practice applying course content. Typical project deliverables include shared code of ethics with reflection, a presentation (Project 3 / final slot), and a written report with code appendix—exact prompts will be posted under projects."
+  },
+  {
+    "objectID": "syllabus.html#missed-or-late-work",
+    "href": "syllabus.html#missed-or-late-work",
+    "title": "Course Syllabus",
+    "section": "Missed or late work",
+    "text": "Missed or late work\nPolicies are discussed and agreed upon in the first two weeks of class, then posted on Canvas."
+  },
+  {
+    "objectID": "syllabus.html#academic-integrity",
+    "href": "syllabus.html#academic-integrity",
+    "title": "Course Syllabus",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nStudents are responsible for knowing and abiding by Cal Poly Humboldt’s academic honesty policy. Students caught cheating will receive zero points and be reported to Student Judicial Affairs. Working in small groups on projects and when preparing for quizzes is encouraged, but work submitted for grading must be your own."
+  },
+  {
+    "objectID": "syllabus.html#ai-policy",
+    "href": "syllabus.html#ai-policy",
+    "title": "Course Syllabus",
+    "section": "AI policy",
+    "text": "AI policy\nYou may use AI (for example ChatGPT or Claude) to help you learn the materials, perform data analyses, or work on projects. For graded work completed outside class:\n\nIf you used AI, acknowledge it briefly in the document (name the service; detailed prompts are not required).\nYou are responsible for the correctness and appropriateness of everything you turn in (AI-assisted or not).\n\nThe instructor may use AI to improve course materials (for example checking whether an assignment is college-level or clarifying quiz wording). AI will not be used to grade your work, and AI detection tools will not be used to check your work."
+  },
+  {
+    "objectID": "syllabus.html#campus-policies-and-resources",
+    "href": "syllabus.html#campus-policies-and-resources",
+    "title": "Course Syllabus",
+    "section": "Campus policies and resources",
+    "text": "Campus policies and resources\nSyllabus addendum: campus resources and policies"
+  },
+  {
+    "objectID": "syllabus.html#learning-outcomes",
+    "href": "syllabus.html#learning-outcomes",
+    "title": "Course Syllabus",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nProgram / student learning outcomes (summary)\nStudents will demonstrate computational skills to extract and visualize data; statistical knowledge to build models and ensure valid analysis; contemporary data-oriented skills with ethical considerations; and effective communication for diverse audiences. Measurable behaviors include extracting and summarizing data from large public databases, designing models that guide valid analysis, identifying frameworks and biases relevant to a dataset, and preparing written descriptions of methodology and implications.\n\n\nCourse learning outcomes\nUpon successfully completing this course, you will be able to:\n\nImplement practical and scalable ways for multiple parties to share data, models, and model outcomes while preserving the privacy of each party’s data.\nExplain how machine learning algorithms interpret data and the potential for biases in these algorithms.\nApply multivariate statistical approaches such as principal component analysis and tests of significance to data sets.\nWork with a big data set using a cloud computing system.\nBuild a deep learning model and articulate what distinguishes deep learning from other machine learning algorithms."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Course Schedule",
+    "section": "",
+    "text": "Download this page as PDF\nPlaceholder week outline. Topics and due dates will be refined for the current term (Fall 2025 times are on the syllabus).\n\n\n\nWeek\nFocus / materials\n\n\n\n\n1\nStepping stones; Lab 1\n\n\n2\nTBD\n\n\n3\nLab 3: Data Structures\n\n\n4\nTBD\n\n\n5\nTBD\n\n\n6\nTBD\n\n\n7\nTBD\n\n\n8\nTBD\n\n\n9\nTBD\n\n\n10\nTBD\n\n\n11\nTBD\n\n\n12\nTBD\n\n\n13\nTBD\n\n\n14\nTBD\n\n\n15\nTBD / Project 3 wrap-up\n\n\n\nProject 3 presentations occupy the final-exam slot (see syllabus).\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "assessments.html",
+    "href": "assessments.html",
+    "title": "Assessments",
+    "section": "",
+    "text": "Download this page as PDF\n\nOverview\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nThere are no midterms and no written final exam. Project 3 presentations use the final-exam time slot.\nStepping stones scaffold project work; they are not a separate grade weight.\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\n\nQuizzes (40%)\nQuiz packets and dates will be posted under quizzes/ as they are ready.\n\n\nProjects (20% + 20% + 20%)\n\nProject 1\nProject 2\nProject 3\n\n\n\nStepping stones\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets). Credit rolls into the related project grade. Materials appear under stepping-stones/.\n\nWeek 1 stepping stones\n\n\n\nLabs\nLab notebooks and stubs:\n\nLab 1 (notebook)\nLab 3 (notebook)\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "Lectures",
+    "section": "",
+    "text": "Download this page as PDF\nLecture outlines and readings are still being migrated. Until full lecture pages exist, use the schedule, labs, and resources."
+  },
+  {
+    "objectID": "lectures.html#related-materials-already-on-the-site",
+    "href": "lectures.html#related-materials-already-on-the-site",
+    "title": "Lectures",
+    "section": "Related materials already on the site",
+    "text": "Related materials already on the site\n\nWeek 1 stepping stones\nLab 1\nLab 3: Data Structures"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Download this page as PDF\n\nTextbook and readings\nPlaceholder. Textbook, papers, and assigned readings will be listed here after syllabus conversion.\n\n\nTools\nPlaceholder. Computing environment, packages, and installation notes will be posted here.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   }
 ]

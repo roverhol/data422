@@ -1,17 +1,17 @@
-/* Fickle Hill dusk theme for MATH 107 */
-/* Colors sampled from the Cal Poly Humboldt overlook photograph */
+/* Deep Tide theme for DATA 422 */
+/* Colors sampled from the Cal Poly Humboldt coastal fog photograph */
 
 /* Color palette */
 :root {
-  --dusk-bg: #1c1822;           /* Near-black plum, forest shadow */
-  --dusk-navbar: #141018;       /* Slightly darker nav bar */
-  --dusk-surface: #2a2433;      /* Raised panels, cards, callouts */
-  --dusk-ridge: #746988;        /* Hazy ridge — borders and rules */
-  --dusk-title: #fde6dc;        /* Warm sky — lighter than body so headings pop */
-  --dusk-text: #f3e6e4;         /* Pale peach body text */
-  --dusk-muted: #b9a9bd;        /* Sky mauve, secondary text */
-  --dusk-lilac: #d1b4d5;        /* Haze lilac links */
-  --dusk-peach: #fccbad;        /* Sun — horizon line and still accents */
+  --dusk-bg: #1E2423;           /* Deep shadow */
+  --dusk-navbar: #141918;       /* Near-black green */
+  --dusk-surface: #2C3534;      /* Dark sea rock */
+  --dusk-ridge: #5B7876;        /* Deep muted teal — borders */
+  --dusk-title: #EAEAE8;        /* Fog highlight */
+  --dusk-text: #D2DCDA;         /* Cool gray body text */
+  --dusk-muted: #8A9A96;        /* Coastal gray */
+  --dusk-lilac: #76938E;        /* Water teal — links */
+  --dusk-peach: #A3BFB8;        /* Mist on waves — accents */
 
   /* Same roles as the old redwood theme, remapped to dusk */
   --redwood-dark: var(--dusk-bg);
@@ -80,9 +80,8 @@ h2, h3, h4, h5, h6 {
   padding-bottom: 0.4rem !important;
 }
 
-/* Fickle Hill banner: full width. Height tracks the photo, so the
-   crop is the same at any window size (not a short cover-strip).
-   Sky above the sun is cropped; more of the forest/cliff stays in frame. */
+/* Coastal fog banner: full width. Height tracks the photo.
+   Crop favors sea stacks and water under the fog bank. */
 header#title-block-header {
   position: relative;
   background: transparent !important;
@@ -100,12 +99,12 @@ header#title-block-header::before {
     linear-gradient(
       to bottom,
       transparent 70%,
-      rgba(28, 24, 34, 0.45) 88%,
+      rgba(30, 36, 35, 0.45) 88%,
       var(--dusk-bg) 100%
     ),
-    url("../images/humboldt-overlook.png");
+    url("../images/humboldt-coast.jpg");
   background-size: cover;
-  background-position: 42% 73%;
+  background-position: 50% 62%;
   background-repeat: no-repeat;
 }
 
