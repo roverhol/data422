@@ -445,7 +445,7 @@ footer.footer .fickle-photo-credit a:hover {
 
 #quarto-content blockquote,
 #quarto-content .blockquote {
-  background-color: rgba(42, 36, 51, 0.9) !important;
+  background-color: rgba(44, 53, 52, 0.9) !important;
   border-left: 4px solid var(--dusk-lilac) !important;
 }
 
@@ -667,27 +667,27 @@ tr:hover {
 #quarto-content pre.sourceCode .kw,
 #quarto-content pre.sourceCode .cf,
 #quarto-content pre.sourceCode .op {
-  color: #c5b8e8 !important;
+  color: #a3bfb8 !important;
 }
 
 #quarto-content pre.sourceCode .co {
-  color: #b9a9bd !important;
+  color: #8a9a96 !important;
 }
 
 #quarto-content pre.sourceCode .st,
 #quarto-content pre.sourceCode .ch {
-  color: #fccbad !important;
+  color: #a3bfb8 !important;
 }
 
 #quarto-content pre.sourceCode .dv,
 #quarto-content pre.sourceCode .fl,
 #quarto-content pre.sourceCode .bn {
-  color: #d1b4d5 !important;
+  color: #76938e !important;
 }
 
 #quarto-content pre.sourceCode .fu,
 #quarto-content pre.sourceCode .ot {
-  color: #e4c8d4 !important;
+  color: #c4d4d0 !important;
 }
 
 #quarto-content pre.sourceCode .va,

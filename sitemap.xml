@@ -1,31 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://roverhol.github.io/data422/index.html</loc>
-    <lastmod>2026-08-24T03:49:59.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://roverhol.github.io/data422/license.html</loc>
-    <lastmod>2026-08-24T03:49:59.999Z</lastmod>
-  </url>
-  <url>
     <loc>https://roverhol.github.io/data422/syllabus.html</loc>
-    <lastmod>2026-08-24T03:50:00.000Z</lastmod>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
   </url>
   <url>
     <loc>https://roverhol.github.io/data422/schedule.html</loc>
-    <lastmod>2026-08-24T03:49:59.999Z</lastmod>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
   </url>
   <url>
-    <loc>https://roverhol.github.io/data422/assessments.html</loc>
-    <lastmod>2026-08-24T03:49:59.975Z</lastmod>
+    <loc>https://roverhol.github.io/data422/projects/project-3.html</loc>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/projects/project-1.html</loc>
+    <lastmod>2026-08-24T03:51:24.506Z</lastmod>
   </url>
   <url>
     <loc>https://roverhol.github.io/data422/lectures.html</loc>
-    <lastmod>2026-08-24T03:49:59.999Z</lastmod>
+    <lastmod>2026-08-24T03:51:24.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/labs/lab-01.html</loc>
+    <lastmod>2026-08-24T03:51:24.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/assessments.html</loc>
+    <lastmod>2026-08-24T03:51:24.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/index.html</loc>
+    <lastmod>2026-08-24T03:51:24.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/labs/lab-03.html</loc>
+    <lastmod>2026-08-24T03:51:24.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/license.html</loc>
+    <lastmod>2026-08-24T03:51:24.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/projects/project-2.html</loc>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
   </url>
   <url>
     <loc>https://roverhol.github.io/data422/resources.html</loc>
-    <lastmod>2026-08-24T03:49:59.999Z</lastmod>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://roverhol.github.io/data422/stepping-stones/week-01-stepping-stones.html</loc>
+    <lastmod>2026-08-24T03:51:24.507Z</lastmod>
   </url>
 </urlset>

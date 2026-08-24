@@ -1,54 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DATA 422: Advanced Data Science Methods and Ethics",
-    "section": "",
-    "text": "Start with the course schedule for the recommended path through the material.\nSee the syllabus for policies and grading.\nReadings and outlines will live under lectures.\nAssessments lists quizzes, projects, and stepping stones.\nTextbook and tools will be collected on resources.\n\nDownload this page as PDF"
-  },
-  {
-    "objectID": "index.html#quick-start",
-    "href": "index.html#quick-start",
-    "title": "DATA 422: Advanced Data Science Methods and Ethics",
-    "section": "",
-    "text": "Start with the course schedule for the recommended path through the material.\nSee the syllabus for policies and grading.\nReadings and outlines will live under lectures.\nAssessments lists quizzes, projects, and stepping stones.\nTextbook and tools will be collected on resources.\n\nDownload this page as PDF"
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "DATA 422: Advanced Data Science Methods and Ethics",
-    "section": "Instructor",
-    "text": "Instructor\nDr. Rosanna Overholser\nEmail: rho3@humboldt.edu\nOffice: BSS 334\nOffice hours: see syllabus (Fall 2025 hours listed; update for current term)."
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "DATA 422: Advanced Data Science Methods and Ethics",
-    "section": "Welcome",
-    "text": "Welcome\nThis website hosts materials for DATA 422: Advanced Data Science Methods and Ethics at Cal Poly Humboldt. Fall 2025 meeting times are on the syllabus (update for the current term).\nThere are no midterms and no written final. Project 3 presentations use the final-exam time slot."
-  },
-  {
-    "objectID": "index.html#grading-snapshot",
-    "href": "index.html#grading-snapshot",
-    "title": "DATA 422: Advanced Data Science Methods and Ethics",
-    "section": "Grading snapshot",
-    "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nStepping stones scaffold the projects; they are not a separate grade weight. Details are on Assessments and the syllabus."
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
-  },
-  {
-    "objectID": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
-    "href": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
-    "title": "License",
-    "section": "",
-    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
-  },
-  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Course Syllabus",
@@ -147,11 +98,18 @@
     "text": "Download this page as PDF\nPlaceholder week outline. Topics and due dates will be refined for the current term (Fall 2025 times are on the syllabus).\n\n\n\nWeek\nFocus / materials\n\n\n\n\n1\nStepping stones; Lab 1\n\n\n2\nTBD\n\n\n3\nLab 3: Data Structures\n\n\n4\nTBD\n\n\n5\nTBD\n\n\n6\nTBD\n\n\n7\nTBD\n\n\n8\nTBD\n\n\n9\nTBD\n\n\n10\nTBD\n\n\n11\nTBD\n\n\n12\nTBD\n\n\n13\nTBD\n\n\n14\nTBD\n\n\n15\nTBD / Project 3 wrap-up\n\n\n\nProject 3 presentations occupy the final-exam slot (see syllabus).\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
-    "objectID": "assessments.html",
-    "href": "assessments.html",
-    "title": "Assessments",
+    "objectID": "projects/project-3.html",
+    "href": "projects/project-3.html",
+    "title": "Project 3",
     "section": "",
-    "text": "Download this page as PDF\n\nOverview\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nThere are no midterms and no written final exam. Project 3 presentations use the final-exam time slot.\nStepping stones scaffold project work; they are not a separate grade weight.\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\n\nQuizzes (40%)\nQuiz packets and dates will be posted under quizzes/ as they are ready.\n\n\nProjects (20% + 20% + 20%)\n\nProject 1\nProject 2\nProject 3\n\n\n\nStepping stones\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets). Credit rolls into the related project grade. Materials appear under stepping-stones/.\n\nWeek 1 stepping stones\n\n\n\nLabs\nLab notebooks and stubs:\n\nLab 1 (notebook)\nLab 3 (notebook)\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+    "text": "Download this page as PDF\n\nProject 3\nStub. Prompt, deliverables, and due dates will be posted here.\nSee Assessments for grade weight (20%). Stepping stones related to this project will appear under stepping-stones/ when ready.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "projects/project-1.html",
+    "href": "projects/project-1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "Download this page as PDF\n\nProject 1\nStub. Prompt, deliverables, and due dates will be posted here.\nSee Assessments for grade weight (20%). Stepping stones related to this project will appear under stepping-stones/ when ready.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
     "objectID": "lectures.html",
@@ -168,10 +126,136 @@
     "text": "Related materials already on the site\n\nWeek 1 stepping stones\nLab 1\nLab 3: Data Structures"
   },
   {
+    "objectID": "labs/lab-01.html",
+    "href": "labs/lab-01.html",
+    "title": "Lab 1",
+    "section": "",
+    "text": "Download this page as PDF\n\nLab 1\nPrimary materials are in the Jupyter notebook:\n\nlab-01.ipynb (copied from Drive data422_lab1.ipynb)\n\nOpen the notebook in Jupyter Lab / VS Code / Colab as directed in class. This page is a hub stub for the course website sidebar and Canvas links.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "assessments.html",
+    "href": "assessments.html",
+    "title": "Assessments",
+    "section": "",
+    "text": "Download this page as PDF\n\nOverview\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nThere are no midterms and no written final exam. Project 3 presentations use the final-exam time slot.\nStepping stones scaffold project work; they are not a separate grade weight.\nWeekly quizzes draw on that week’s lab, lecture, and assigned reading or videos.\n\n\nQuizzes (40%)\nQuiz packets and dates will be posted under quizzes/ as they are ready.\n\n\nProjects (20% + 20% + 20%)\n\nProject 1\nProject 2\nProject 3\n\n\n\nStepping stones\nStepping stones scaffold the projects (lab demos, checkpoints, weekly question sets). Credit rolls into the related project grade. Materials appear under stepping-stones/.\n\nWeek 1 stepping stones\n\n\n\nLabs\nLab notebooks and stubs:\n\nLab 1 (notebook)\nLab 3 (notebook)\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DATA 422: Advanced Data Science Methods and Ethics",
+    "section": "",
+    "text": "Start with the course schedule for the recommended path through the material.\nSee the syllabus for policies and grading.\nReadings and outlines will live under lectures.\nAssessments lists quizzes, projects, and stepping stones.\nTextbook and tools will be collected on resources.\n\nDownload this page as PDF"
+  },
+  {
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "DATA 422: Advanced Data Science Methods and Ethics",
+    "section": "",
+    "text": "Start with the course schedule for the recommended path through the material.\nSee the syllabus for policies and grading.\nReadings and outlines will live under lectures.\nAssessments lists quizzes, projects, and stepping stones.\nTextbook and tools will be collected on resources.\n\nDownload this page as PDF"
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "DATA 422: Advanced Data Science Methods and Ethics",
+    "section": "Instructor",
+    "text": "Instructor\nDr. Rosanna Overholser\nEmail: rho3@humboldt.edu\nOffice: BSS 334\nOffice hours: see syllabus (Fall 2025 hours listed; update for current term)."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "DATA 422: Advanced Data Science Methods and Ethics",
+    "section": "Welcome",
+    "text": "Welcome\nThis website hosts materials for DATA 422: Advanced Data Science Methods and Ethics at Cal Poly Humboldt. Fall 2025 meeting times are on the syllabus (update for the current term).\nThere are no midterms and no written final. Project 3 presentations use the final-exam time slot."
+  },
+  {
+    "objectID": "index.html#grading-snapshot",
+    "href": "index.html#grading-snapshot",
+    "title": "DATA 422: Advanced Data Science Methods and Ethics",
+    "section": "Grading snapshot",
+    "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nStepping stones scaffold the projects; they are not a separate grade weight. Details are on Assessments and the syllabus."
+  },
+  {
+    "objectID": "labs/lab-03.html",
+    "href": "labs/lab-03.html",
+    "title": "Lab 3: Data Structures",
+    "section": "",
+    "text": "Download this page as PDF\n\nLab 3: Data Structures\nPrimary materials are in the Jupyter notebook:\n\nlab-03.ipynb (copied from Drive lab3_datastructures_data422.ipynb)\n\nOpen the notebook in your usual environment. This page is a hub stub for the course website sidebar and Canvas links.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "href": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+  },
+  {
+    "objectID": "projects/project-2.html",
+    "href": "projects/project-2.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Download this page as PDF\n\nProject 2\nStub. Prompt, deliverables, and due dates will be posted here.\nSee Assessments for grade weight (20%). Stepping stones related to this project will appear under stepping-stones/ when ready.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Resources",
     "section": "",
     "text": "Download this page as PDF\n\nTextbook and readings\nPlaceholder. Textbook, papers, and assigned readings will be listed here after syllabus conversion.\n\n\nTools\nPlaceholder. Computing environment, packages, and installation notes will be posted here.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html",
+    "href": "stepping-stones/week-01-stepping-stones.html",
+    "title": "Week 1 Stepping Stones",
+    "section": "",
+    "text": "Download this page as PDF"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-a-ai-ml-and-models",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-a-ai-ml-and-models",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section A: AI, ML, and Models",
+    "text": "Section A: AI, ML, and Models\n\nWho coined the term machine learning and in what year?\nReading: §1.1\nBriefly distinguish AI from machine learning as the book frames them.\nReading: §1.1\nWrite the general model form \\(y=f(x)\\). What do \\(x\\), \\(y\\), and \\(f\\) represent in supervised learning?\nReading: §1.2"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-b-four-step-ml-process",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-b-four-step-ml-process",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section B: Four-Step ML Process",
+    "text": "Section B: Four-Step ML Process\n\nList the four steps of the supervised ML process.\nReading: §1.3\nIn the house-price example, what are the parameters of the model, and what do they control?\nReading: §1.2\nWhy do we need a loss function? Give one example appropriate to regression.\nReading: §1.2–§1.3"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-c-math-notation-vectors-matrices",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-c-math-notation-vectors-matrices",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section C: Math Notation — Vectors & Matrices",
+    "text": "Section C: Math Notation — Vectors & Matrices\n\nRewrite \\(y = wx + b\\) for two features using vector notation.\nReading: §1.4\nCompute the dot product \\(w=[2,3]\\), \\(x=[4,5]\\).\nReading: §1.4\nDefine cosine similarity between two vectors.\nReading: §1.4 (Eq. 1.5)\nCosine similarity practice (compute & draw): For each pair,\n\ncompute cosine similarity, (ii) sketch the vectors\nsay whether they’re close in direction or far apart, and (iv) explain how the value reflects that.\n\n\n\\([1,0]\\) and \\([0,1]\\)\n\n\\([1,0]\\) and \\([1,1]\\)\n\n\\([2,2]\\) and \\([-2,-2]\\)\n\n\\([3,4]\\) and \\([6,8]\\)\n\nReading: §1.4\nTerminology check: In this chapter, are “parameters” and “weights” used interchangeably? If so, what exactly are the parameters in \\(y=wx+b\\)?\nReading: §1.2\nNotation check (labels vs. predictions): In logistic regression, clearly define \\(z\\), \\(\\hat{y}\\), and \\(y\\).\nWhich is the logit, which is the model output, and which is the true label?\nReading: §1.7–§1.8"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-d-logistic-regression-gradient-descent",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-d-logistic-regression-gradient-descent",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section D: Logistic Regression & Gradient Descent",
+    "text": "Section D: Logistic Regression & Gradient Descent\n\nWrite the logistic regression equation and the sigmoid definition.\nReading: §1.7 (Eq. 1.8)\nWhy is sigmoid an appropriate activation for binary classification?\nReading: §1.5, §1.7\nWrite the binary cross-entropy loss for one example.\nReading: §1.7 (Eq. 1.9)\nWhy do we use iterative optimization (gradient descent) instead of a closed-form solution for logistic regression?\nReading: §1.7\nWhat does the learning rate control? What happens if it’s too small or too large?\nReading: §1.7"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-e-tensors-autograd",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-e-tensors-autograd",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section E: Tensors & Autograd",
+    "text": "Section E: Tensors & Autograd\n\nWhat is a tensor in PyTorch? Reading: §1.8\nWhy is autograd necessary for training neural networks at scale?\nReading: §1.8\nWhat does loss.backward() compute, and what does optimizer.step() do next?\nReading: §1.8\nReference: PyTorch Autograd docs"
+  },
+  {
+    "objectID": "stepping-stones/week-01-stepping-stones.html#section-f-mapping-equations-pytorch",
+    "href": "stepping-stones/week-01-stepping-stones.html#section-f-mapping-equations-pytorch",
+    "title": "Week 1 Stepping Stones",
+    "section": "Section F: Mapping Equations ↔︎ PyTorch",
+    "text": "Section F: Mapping Equations ↔︎ PyTorch\n\nMatch each mathematical component to the PyTorch piece:\n\n\\(\\mathbf{w} \\cdot \\mathbf{x} + b\\)\n\\(\\sigma(z)\\)\nbinary cross-entropy Reading: §1.8\n\nIn:\nmodel = nn.Sequential(\n    nn.Linear(2, 1),\n    nn.Sigmoid()\n)\nwhat do the numbers 2 and 1 represent?\nReading: §1.8\nReference: PyTorch nn.Linear docs"
   }
 ]
