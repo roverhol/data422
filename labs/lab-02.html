@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lab-03 – DATA 422 - Advanced Data Science Methods and Ethics</title>
+<title>Lab 2 – DATA 422 - Advanced Data Science Methods and Ethics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -108,35 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../assets/css/fickle-hill-theme.css">
 </head>
@@ -153,9 +124,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#open-in-colab" id="toc-open-in-colab" class="nav-link active" data-scroll-target="#open-in-colab">Open in Colab</a></li>
+  <li><a href="#what-you-will-do" id="toc-what-you-will-do" class="nav-link" data-scroll-target="#what-you-will-do">What you will do</a></li>
   <li><a href="#project-separate" id="toc-project-separate" class="nav-link" data-scroll-target="#project-separate">Project (separate)</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab-03.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab-02.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -166,7 +138,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Lab 3</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Lab 2</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">DATA 422: Advanced Data Science Methods and Ethics</p>
 </div>
 
@@ -184,21 +156,30 @@ window.Quarto = {
 </header>
 
 
-<p><a href="lab-03.pdf">Download this page as PDF</a></p>
-<p>Ungraded. Attributions, evidence packets, LoRA as <span class="math inline">\(W' = W+BA\)</span>. <strong>Paper</strong> <a href="../quizzes/quiz-03-prep.qmd">Quiz 3</a> is Fri Sep 18 (this lab + Lab 4 + Ch. 4 + CNN appendix).</p>
+<p><a href="lab-02.pdf">Download this page as PDF</a></p>
+<p>Ungraded. <strong>Paper quiz</strong> Friday from the <a href="../quizzes/quiz-02-prep.qmd">Quiz 2 study bank</a> (this lab + Ch. 2–3).</p>
 <section id="open-in-colab" class="level1">
 <h1>Open in Colab</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-03.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-02.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 <figcaption>Open In Colab</figcaption>
 </figure>
 </div>
-<p>Notebook: <a href="lab-03.ipynb">lab-03.ipynb</a>. CPU. Toy tensors — your Project 1 IG uses the wildfire MLP.</p>
+<p>Notebook: <a href="lab-02.ipynb">lab-02.ipynb</a>. CPU runtime.</p>
+</section>
+<section id="what-you-will-do" class="level1">
+<h1>What you will do</h1>
+<ol type="1">
+<li>Tiny next-character LM (Karpathy loop) — <strong>not</strong> the insurance model.</li>
+<li><strong>JIT:</strong> object-oriented Python for <code>nn.Module</code> (<code>class</code>, <code>self</code>, <code>super()</code>, <code>forward</code>).</li>
+<li><code>RiskMLP</code> shapes, parameter count, tiny-batch overfit.</li>
+</ol>
+<p>Exercises print a <strong>desired</strong> shape, count, or accuracy so you can self-check.</p>
 </section>
 <section id="project-separate" class="level1">
 <h1>Project (separate)</h1>
-<p>Week 3 stepping stone (draft until posted): packets from <strong>your</strong> Model 1.</p>
+<p><a href="../stepping-stones/project-1-week-02.qmd">Project 1 week 2</a></p>
 
 
 <!-- -->
@@ -663,32 +644,40 @@ window.Quarto = {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lab 3"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lab 2"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "DATA 422: Advanced Data Science Methods and Ethics"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf: default</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](lab-03.pdf)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](lab-02.pdf)</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Ungraded. Attributions, evidence packets, LoRA as $W' = W+BA$. **Paper** <span class="co">[</span><span class="ot">Quiz 3</span><span class="co">](../quizzes/quiz-03-prep.qmd)</span> is Fri Sep 18 (this lab + Lab 4 + Ch. 4 + CNN appendix).</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Ungraded. **Paper quiz** Friday from the <span class="co">[</span><span class="ot">Quiz 2 study bank</span><span class="co">](../quizzes/quiz-02-prep.qmd)</span> (this lab + Ch. 2–3).</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Open in Colab</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-03.ipynb)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-02.ipynb)</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="pdf"}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-03.ipynb)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422/blob/main/labs/lab-02.ipynb)</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Notebook: <span class="co">[</span><span class="ot">lab-03.ipynb</span><span class="co">](lab-03.ipynb)</span>. CPU. Toy tensors — your Project 1 IG uses the wildfire MLP.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Notebook: <span class="co">[</span><span class="ot">lab-02.ipynb</span><span class="co">](lab-02.ipynb)</span>. CPU runtime.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project (separate)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># What you will do</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Week 3 stepping stone (draft until posted): packets from **your** Model 1.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Tiny next-character LM (Karpathy loop) — **not** the insurance model.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**JIT:** object-oriented Python for <span class="in">`nn.Module`</span> (<span class="in">`class`</span>, <span class="in">`self`</span>, <span class="in">`super()`</span>, <span class="in">`forward`</span>).</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span><span class="in">`RiskMLP`</span> shapes, parameter count, tiny-batch overfit.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Exercises print a **desired** shape, count, or accuracy so you can self-check.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project (separate)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Project 1 week 2</span><span class="co">](../stepping-stones/project-1-week-02.qmd)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

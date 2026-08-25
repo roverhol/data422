@@ -35,157 +35,31 @@
     "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nDetails are on Assessments and the syllabus."
   },
   {
-    "objectID": "quizzes.html",
-    "href": "quizzes.html",
-    "title": "Quizzes",
+    "objectID": "labs/lab-02.html",
+    "href": "labs/lab-02.html",
+    "title": "Lab 2",
     "section": "",
-    "text": "Friday quizzes are 40% of the course (15 points each). They are on paper, in class, in the first 10 minutes of Friday lecture (11:00–11:10 a.m.).\nEach scored quiz is a short subset of that week’s study bank. Work the whole bank. Quiz items can come from the lab as well as lecture and the book or other assigned reading.\nThis Friday (Aug 28) is participation, not correctness.\n\n\n\nQuiz\nDate\nStudy bank\nCovers\n\n\n\n\n1\nFri Aug 28\nQuiz 1 prep\nCh. 1 + Lab 1\n\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+    "text": "Download this page as PDF\nUngraded. Paper quiz Friday from the Quiz 2 study bank (this lab + Ch. 2–3).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-02.ipynb. CPU runtime.\n\n\nWhat you will do\n\nTiny next-character LM (Karpathy loop) — not the insurance model.\nJIT: object-oriented Python for nn.Module (class, self, super(), forward).\nRiskMLP shapes, parameter count, tiny-batch overfit.\n\nExercises print a desired shape, count, or accuracy so you can self-check.\n\n\nProject (separate)\nProject 1 week 2\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "labs/lab-03.html",
+    "href": "labs/lab-03.html",
+    "title": "Lab 3",
     "section": "",
-    "text": "Lecture: Monday, Wednesday, Friday, 11:00–11:50 a.m., NR 224.\nLab: Tuesday, 11:00 a.m.–12:50 p.m., BSS 313.\nLater weeks will be posted here as we go.\n\n\n\nWeek\nMonday\nTuesday (lab — demo / practice, no points)\nWednesday\nFriday\n\n\n\n\n1\nAug 24Syllabus\nAug 25Lab 1: §1.3 logistic, sklearn/statsmodels, Sequential\nAug 26Wildfire motivation; model contracts; Ch 1: loss, gradients, training loop\nAug 28Ch 2: tokens, embeddings, likelihoodQuiz 1 (Ch 1 + Lab 1)\n\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+    "text": "Download this page as PDF\nUngraded. Attributions, evidence packets, LoRA as \\(W' = W+BA\\). Paper Quiz 3 is Fri Sep 18 (this lab + Lab 4 + Ch. 4 + CNN appendix).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-03.ipynb. CPU. Toy tensors — your Project 1 IG uses the wildfire MLP.\n\n\nProject (separate)\nWeek 3 stepping stone (draft until posted): packets from your Model 1.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Course Syllabus",
+    "objectID": "labs/lab-04.html",
+    "href": "labs/lab-04.html",
+    "title": "Lab 4",
     "section": "",
-    "text": "Download this page as PDF"
+    "text": "Download this page as PDF\nUngraded. Template memos, temperature scaling, probability fidelity. Paper Quiz 3 (Fri Sep 18).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-04.ipynb. CPU.\n\n\nProject (separate)\nWeek 4 stone: template vs LoRA faithfulness on held-out packets.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   },
   {
-    "objectID": "syllabus.html#course-information",
-    "href": "syllabus.html#course-information",
-    "title": "Course Syllabus",
-    "section": "Course information",
-    "text": "Course information\nCourse Number: DATA 422\nCourse Title: Advanced Data Science Methods and Ethics\nUnits: 4\nSemester: Fall 2026\nMode of Instruction: In person\nPrerequisite: DATA 322\nMinimum grade for major: C-\n\nLecture\nSection: DATA 422-10 (Class Number 42778)\nDays/Time: Monday, Wednesday, Friday, 11:00–11:50 a.m.\nLocation: NR 224\n\n\nLaboratory (Activity)\nSection: DATA 422-11 (Class Number 42779)\nDay/Time: Tuesday, 11:00 a.m.–12:50 p.m.\nLocation: BSS 313\n\n\nProject 3 presentations (final-exam slot)\nFriday, December 18, 2026, 10:20 a.m.–12:10 p.m., NR 224."
-  },
-  {
-    "objectID": "syllabus.html#instructor",
-    "href": "syllabus.html#instructor",
-    "title": "Course Syllabus",
-    "section": "Instructor",
-    "text": "Instructor\nInstructor: Dr. Rosanna Overholser\nEmail: rho3@humboldt.edu\nOffice: BSS 334\nPhone: 707-826-4020\nOffice hours: Wednesdays 12:30–2:30 p.m. in the Learning Center (first floor of the library); Thursdays 11:00–11:50 a.m. in BSS 334; or by appointment.\nPlease use your Cal Poly Humboldt email and check Canvas regularly for course communications."
-  },
-  {
-    "objectID": "syllabus.html#catalog-description",
-    "href": "syllabus.html#catalog-description",
-    "title": "Course Syllabus",
-    "section": "Catalog description",
-    "text": "Catalog description\nThis course provides a treatment of advanced topics in Data Science. Topics include: (i) Privacy and Ethics, (ii) Multivariate Statistics, (iii) Big Data and Cloud Computing, and (iv) Deep Learning. The course will draw from numerous case studies and applications, with a practical rather than theoretical emphasis."
-  },
-  {
-    "objectID": "syllabus.html#required-materials",
-    "href": "syllabus.html#required-materials",
-    "title": "Course Syllabus",
-    "section": "Required materials",
-    "text": "Required materials\n\nTextbook: The Hundred-Page Language Model Book (free online), plus readings provided in Canvas.\nTextbook: How to Argue and Win Every Time: At Home, at Work, in Court, Everywhere by Gerry Spence (used copies can be purchased very cheaply)\nTechnology: A computer for work outside lab (personal, Data Science program, or library checkout). If you need a laptop, consider Cal Poly Humboldt’s Reusable Office Supply Exchange (R.O.S.E.) program."
-  },
-  {
-    "objectID": "syllabus.html#course-load",
-    "href": "syllabus.html#course-load",
-    "title": "Course Syllabus",
-    "section": "Course load",
-    "text": "Course load\nDATA 422 has 3 units of lecture and 1 unit of activity. Expect about 5 hours in class and at least 7 hours out of class each week."
-  },
-  {
-    "objectID": "syllabus.html#assessment-and-grading",
-    "href": "syllabus.html#assessment-and-grading",
-    "title": "Course Syllabus",
-    "section": "Assessment and grading",
-    "text": "Assessment and grading\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\n\nHow assessments work\n\nProject 3 is written in the university final-exam time slot (Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224).\nLabs are ungraded Colab notebooks (objectives, syntax, demos, self-check exercises). They are not a grade.\n\nStepping stones are project checkpoints; they count toward the related project, not lab.\nWeekly quizzes are paper, in class, in the first 10 minutes of Friday lecture (15 points). They draw on that week’s lab, lecture, and assigned reading or videos. Study banks are on the site; Canvas is the reminder and the gradebook.\nLetter grades (nearest percent): 93–100 (A); 90–92 (A-); 87–89 (B+); 83–86 (B); 80–82 (B-); 77–79 (C+); 73–76 (C); 70–72 (C-); 60–69 (D); below 60 (F).\nSee Assessments for links as materials are posted."
-  },
-  {
-    "objectID": "syllabus.html#important-dates",
-    "href": "syllabus.html#important-dates",
-    "title": "Course Syllabus",
-    "section": "Important dates",
-    "text": "Important dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nAugust 24\nClasses begin\n\n\nSeptember 7\nLabor Day (no class)\n\n\nNovember 11\nVeterans Day (no class)\n\n\nNovember 23–27\nFall break (no class)\n\n\nDecember 11\nLast class meeting\n\n\nDecember 18\nProject 3 presentations, 10:20 a.m.–12:10 p.m., NR 224\n\n\n\nSee the schedule for the week-by-week calendar."
-  },
-  {
-    "objectID": "syllabus.html#course-structure",
-    "href": "syllabus.html#course-structure",
-    "title": "Course Syllabus",
-    "section": "Course structure",
-    "text": "Course structure\nMeetings include discussions and small-group activities based on readings distributed beforehand. Projects practice applying course content. Typical project deliverables include shared code of ethics with reflection, a presentation (Project 3 / final slot), and a written report with code appendix—exact prompts will be posted under projects."
-  },
-  {
-    "objectID": "syllabus.html#missed-or-late-work",
-    "href": "syllabus.html#missed-or-late-work",
-    "title": "Course Syllabus",
-    "section": "Missed or late work",
-    "text": "Missed or late work\nQuizzes can be made up in Rosanna’s Office Hours. Project stepping stones or deliverables can be turned in late by making an arrangement with Rosanna. The only exceptions are the deliverables for projects 2 and 3, which will involve class participation for which there is no substitute."
-  },
-  {
-    "objectID": "syllabus.html#academic-integrity",
-    "href": "syllabus.html#academic-integrity",
-    "title": "Course Syllabus",
-    "section": "Academic integrity",
-    "text": "Academic integrity\nStudents are responsible for knowing and abiding by Cal Poly Humboldt’s academic honesty policy. Students caught cheating will receive zero points and be reported to Student Judicial Affairs. Working in small groups on projects and when preparing for quizzes is encouraged, but work submitted for grading must be your own."
-  },
-  {
-    "objectID": "syllabus.html#ai-policy",
-    "href": "syllabus.html#ai-policy",
-    "title": "Course Syllabus",
-    "section": "AI policy",
-    "text": "AI policy\nYou may use AI (for example ChatGPT or Claude) to help you learn the materials, perform data analyses, or work on projects. For graded work completed outside class:\n\nIf you used AI, acknowledge it briefly in the document (name the service; detailed prompts are not required).\nYou are responsible for the correctness and appropriateness of everything you turn in (AI-assisted or not).\n\nThe instructor may use AI to improve course materials (for example checking whether an assignment is college-level or clarifying quiz wording). AI will not be used to grade your work, and AI detection tools will not be used to check your work."
-  },
-  {
-    "objectID": "syllabus.html#campus-policies-and-resources",
-    "href": "syllabus.html#campus-policies-and-resources",
-    "title": "Course Syllabus",
-    "section": "Campus policies and resources",
-    "text": "Campus policies and resources\nSyllabus addendum: campus resources and policies"
-  },
-  {
-    "objectID": "syllabus.html#learning-outcomes",
-    "href": "syllabus.html#learning-outcomes",
-    "title": "Course Syllabus",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nProgram / student learning outcomes (summary)\nStudents will demonstrate computational skills to extract and visualize data; statistical knowledge to build models and ensure valid analysis; contemporary data-oriented skills with ethical considerations; and effective communication for diverse audiences.\n\n\nCourse learning outcomes\nUpon successfully completing this course, you will be able to apply advanced data science methods and ethical reasoning in practical case studies spanning privacy, multivariate statistics, big data / cloud computing, and deep learning."
-  },
-  {
-    "objectID": "assessments.html",
-    "href": "assessments.html",
-    "title": "Assessments",
+    "objectID": "labs/lab-05.html",
+    "href": "labs/lab-05.html",
+    "title": "Lab 5",
     "section": "",
-    "text": "Download this page as PDF\n\nOverview\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nThere are no midterms and no written final exam. Project 3 uses the final-exam time slot as a work session.\nLabs are Colab demos and practice (Open in Colab on each lab page). They are not a grade. Friday paper quizzes (first 10 minutes of lecture) cover that week’s lab, lecture, and assigned reading or videos.\nStepping stones are project checkpoints. They count toward the related project grade, not as a separate weight or lab score. They are due Wednesday, 11:59 p.m.\n\n\nQuizzes (40%)\nPaper, in class, Fridays starting August 28, 11:00–11:10 a.m. Each quiz is 15 points. Canvas listings are reminders and the gradebook (no online quiz). Each scored quiz is a short subset of that week’s study bank. Work the whole bank:\n\nQuiz 1 prep (Ch. 1 + Lab 1) — Fri Aug 28\n\n\n\nProjects (20% + 20% + 20%)\n\n\nStepping stones\nStepping stones are project checkpoints (not lab points). Credit rolls into the related project grade. Due Wednesday, 11:59 p.m.\n\n\nLabs\nTuesday Colab notebooks. Open-in-Colab badge on each page. Not graded but please do them to prepare that week’s quiz..\n\nLab 1 — §1.3 logistic, sklearn/statsmodels, Sequential\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "Lectures",
-    "section": "",
-    "text": "Download this page as PDF"
-  },
-  {
-    "objectID": "lectures.html#week-1",
-    "href": "lectures.html#week-1",
-    "title": "Lectures",
-    "section": "Week 1 — Contracts, loss, and tokens",
-    "text": "Week 1 — Contracts, loss, and tokens\nAug 24–28. Project 1 starts; Model 1 is not a premium.\n\nCourse path\n\n\n\nStep\nMaterial\n\n\n\n\nMon\nWeek 1 Monday — syllabus\n\n\nLab\nLab 1 · Open in Colab\n\n\nWed\nWeek 1 Wednesday — wildfire contract + Ch. 1\n\n\nFri\nWeek 1 Friday — Ch. 2 · paper Quiz 1\n\n\nStudy\nQuiz 1 bank\n\n\nStone\nProject 1 week 1 (due Wed Sep 2, 11:59 p.m.)\n\n\n\n\n\nMonday — Syllabus and course path\n24 Aug · essential · no LM-book chapter yet\n\nFind the syllabus, schedule, lab Colab, quiz study bank, and Project 1 stepping stone.\nDistinguish ungraded Colab lab, paper Friday quiz, and project stepping stone.\nState the grade weights (quizzes 40%; three projects 20% each) and that there is no written final.\nOpen Google Colab with a Humboldt account and name CPU vs GPU for these labs.\n\n\n\nWednesday — Wildfire contract and Chapter 1\n26 Aug · essential · LM book Ch. 1\n\nDistinguish hazard, risk, observed damage, and a premium or coverage decision.\nState the Model 1 target as \\(\\mathbb{P}(\\texttt{serious\\_damage}=1 \\mid \\text{inspected in/near a fire perimeter})\\) and name what that probability is not.\nDefine \\(z\\) (logit), \\(\\hat y\\), \\(y\\), and a scalar loss; say why we update opposite the gradient.\nPut zero_grad, forward, backward, and step in order and say which line writes .grad.\nExplain why street, APN, and lat/lon are stripped from the student table.\n\n\n\nFriday — Tokens, embeddings, likelihood\n28 Aug · essential · LM book Ch. 2 · paper Quiz 1 (Ch. 1 + Lab 1)\n\nContrast a one-hot vector with a learned embedding.\nInterpret cosine similarity near \\(1\\), \\(0\\), and \\(-1\\).\nDescribe tokenization and why the tokenizer changes sequence length \\(T\\).\nState what a bigram / next-token model is estimating and why lower NLL is better on the same data."
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "",
-    "section": "",
-    "text": "Code\n\n\n\n\n\nTextbook and readings\n\nAndriy Burkov, The Hundred-Page Language Models Book (free online). Chapters are assigned on the schedule.\nSelected Karpathy Zero-to-Hero clips in weeks 1–2 (tiny autograd / makemore / GPT).\n\n\n\nComputing — Google Colab\nLabs run in Google Colab with your Cal Poly Humboldt Google account. Colab already has PyTorch.\nEach lab page has an Open in Colab badge and the .ipynb file.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
-  },
-  {
-    "objectID": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
-    "href": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
-    "title": "License",
-    "section": "",
-    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+    "text": "Download this page as PDF\nUngraded. Local vs pooled vs FedAvg. Paper Quiz 4 (Fri Sep 25) plus the in-class model-risk committee.\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-05.ipynb. CPU. The notebook is a simulation; all tensors already live in one Colab, so it is not a privacy guarantee.\n\n\nProject (separate)\nWeek 5 stone: client table, three training stories, threat sketch.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   }
 ]
