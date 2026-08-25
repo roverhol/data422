@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project 1 – DATA 422 - Advanced Data Science Methods and Ethics</title>
+<title>Project 1 — Week 1 stepping stone – DATA 422 - Advanced Data Science Methods and Ethics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -152,13 +152,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#target-do-not-loosen-this-language" id="toc-target-do-not-loosen-this-language" class="nav-link active" data-scroll-target="#target-do-not-loosen-this-language">Target (do not loosen this language)</a></li>
-  <li><a href="#stepping-stones" id="toc-stepping-stones" class="nav-link" data-scroll-target="#stepping-stones">Stepping stones</a></li>
-  <li><a href="#model-1-in-pytorch" id="toc-model-1-in-pytorch" class="nav-link" data-scroll-target="#model-1-in-pytorch">Model 1 in PyTorch</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#labs-vs-this-project" id="toc-labs-vs-this-project" class="nav-link" data-scroll-target="#labs-vs-this-project">Labs vs this project</a></li>
+  <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link active" data-scroll-target="#what-to-submit">What to submit</a>
+  <ul class="collapse">
+  <li><a href="#target-contract-one-paragraph" id="toc-target-contract-one-paragraph" class="nav-link" data-scroll-target="#target-contract-one-paragraph">1. Target contract (one paragraph)</a></li>
+  <li><a href="#privacy-and-leakage-short-list" id="toc-privacy-and-leakage-short-list" class="nav-link" data-scroll-target="#privacy-and-leakage-short-list">2. Privacy and leakage (short list)</a></li>
+  <li><a href="#pytorch-logistic-baseline" id="toc-pytorch-logistic-baseline" class="nav-link" data-scroll-target="#pytorch-logistic-baseline">3. PyTorch logistic baseline</a></li>
+  <li><a href="#one-training-loop-check" id="toc-one-training-loop-check" class="nav-link" data-scroll-target="#one-training-loop-check">4. One training-loop check</a></li>
+  </ul></li>
+  <li><a href="#acceptance" id="toc-acceptance" class="nav-link" data-scroll-target="#acceptance">Acceptance</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-1-week-01.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -169,7 +172,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Project 1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Project 1 — Week 1 stepping stone</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">DATA 422: Advanced Data Science Methods and Ethics</p>
 </div>
 
@@ -187,59 +190,66 @@ window.Quarto = {
 </header>
 
 
-<p><a href="project-1.pdf">Download this page as PDF</a></p>
-<p><strong>Due (full package):</strong> Friday, October 2<br>
-<strong>Weight:</strong> 20% of the course (stepping stones count toward this project, not toward labs)</p>
-<p>Wildfire insurance AI lab: a <strong>risk model</strong> (Model 1) and later an <strong>evidence-to-text</strong> model (Model 2). Weeks 1–2 are only Model 1.</p>
-<section id="target-do-not-loosen-this-language" class="level1">
-<h1>Target (do not loosen this language)</h1>
-<p>We estimate</p>
-<p><span class="math display">\[\mathbb{P}(\texttt{serious\_damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})\]</span></p>
-<p>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</p>
-<p><code>serious_damage</code> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</p>
-<p>This is <strong>not</strong> an annual household loss probability, <strong>not</strong> a premium, and <strong>not</strong> a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</p>
-</section>
-<section id="stepping-stones" class="level1">
-<h1>Stepping stones</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Stone</th>
-<th>Due</th>
-<th>What you turn in</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="../stepping-stones/project-1-week-01.html">Week 1</a></td>
-<td>Wed Sep 2, 11:59 p.m.</td>
-<td>Contract + PyTorch logistic baseline</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="model-1-in-pytorch" class="level1">
-<h1>Model 1 in PyTorch</h1>
-<p>Same loop as <em>The Hundred-Page Language Models Book</em> and Karpathy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="project-1-week-01.pdf">Download this page as PDF</a></p>
+<p><strong>Due:</strong> Wednesday, September 2, 11:59 p.m.<br>
+<strong>Counts toward:</strong> <a href="../projects/project-1.html">Project 1</a> (not a lab grade)</p>
+<p>Lab 1 practice questions are ungraded. This checkpoint is the start of the wildfire risk model.</p>
+<section id="what-to-submit" class="level1">
+<h1>What to submit</h1>
+<p>A short write-up (PDF or notebook) with four pieces.</p>
+<section id="target-contract-one-paragraph" class="level2">
+<h2 class="anchored" data-anchor-id="target-contract-one-paragraph">1. Target contract (one paragraph)</h2>
+<p>In your own words, state:</p>
 <ul>
-<li><strong>Week 1:</strong> <code>nn.Linear(n_features, 1)</code> — logistic, <span class="math inline">\(z = \mathbf{w}^\top \mathbf{x} + b\)</span>.</li>
-<li><strong>Week 2:</strong> a small MLP (<code>RiskMLP</code>) with the same loss.</li>
+<li>the <strong>unit</strong> (one de-identified structure / DINS inspection);</li>
+<li>the <strong>label</strong> <code>serious_damage</code> (Major or Destroyed = 1; No Damage, Affected, Minor = 0);</li>
+<li>the <strong>conditioning</strong>: the structure was inspected in or near a wildfire perimeter;</li>
+<li>what this number is <strong>not</strong> (not annual household risk, not a premium, not a coverage decision).</li>
 </ul>
-<p>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</p>
 </section>
-<section id="data" class="level1">
-<h1>Data</h1>
-<p>You will receive a de-identified table (<code>properties_modeling.csv</code>) with a <code>split</code> column (<code>train</code> / <code>validation</code> / <code>test</code>). Fit on train, make choices on validation, leave test until the final package.</p>
-<p>The instructor table is built from public <a href="https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data">CAL FIRE DINS</a>. Street, APN, and coordinates are stripped before you see it.</p>
+<section id="privacy-and-leakage-short-list" class="level2">
+<h2 class="anchored" data-anchor-id="privacy-and-leakage-short-list">2. Privacy and leakage (short list)</h2>
+<p>Confirm the released table has no street address, APN, or lat/lon.</p>
+<p>Name <strong>two</strong> fields you would <em>not</em> treat as pre-fire features if they appeared (examples: defensive actions taken during the fire, counts of burned cars). Say why.</p>
 </section>
-<section id="labs-vs-this-project" class="level1">
-<h1>Labs vs this project</h1>
-<p>Tuesday labs are ungraded <strong>Colab</strong> notebooks (practice for the Friday <strong>paper</strong> quiz). They are not stepping stones. The stones on this page are the project checkpoints.</p>
+<section id="pytorch-logistic-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-logistic-baseline">3. PyTorch logistic baseline</h2>
+<p>Fit logistic regression <strong>in PyTorch</strong>. Lab 1 used the book’s <code>Sequential</code> + <code>Sigmoid</code> + <code>BCELoss</code> on a toy example. This stone uses the numerically stabler wrapper: one linear layer, <strong>logits</strong>, <code>BCEWithLogitsLoss</code> (same <span class="math inline">\(\hat y = \sigma(z)\)</span>).</p>
+<p>Use the instructor table and the supplied <code>split</code> column. Fit on <code>train</code>. Report on <code>validation</code> (leave <code>test</code> alone).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Linear(n_features, <span class="dv">1</span>)          <span class="co"># z = Wx + b</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>criterion <span class="op">=</span> nn.BCEWithLogitsLoss()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.AdamW(model.parameters(), lr<span class="op">=</span><span class="fl">3e-3</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x).squeeze(<span class="op">-</span><span class="dv">1</span>)             <span class="co"># (B,)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> criterion(logits, y)               <span class="co"># y in {0, 1}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Do <strong>not</strong> use <code>sklearn.linear_model.LogisticRegression</code> for this stone. DATA 322 already did the closed-form / sklearn version; here the point is the training loop you will reuse for the MLP.</p>
+<p>Report:</p>
+<ul>
+<li>training-set prevalence of <code>serious_damage</code>;</li>
+<li>validation loss, and either ROC-AUC or Brier score;</li>
+<li>a confusion table at <strong>one</strong> probability threshold you chose;</li>
+<li>one sentence on why that threshold is a <strong>decision</strong>, not a property of <span class="math inline">\(z\)</span>.</li>
+</ul>
+</section>
+<section id="one-training-loop-check" class="level2">
+<h2 class="anchored" data-anchor-id="one-training-loop-check">4. One training-loop check</h2>
+<p>Paste a few lines showing <code>zero_grad</code> → forward → <code>loss.backward()</code> → <code>optimizer.step()</code>, and state which of those produces <span class="math inline">\(\nabla_{\mathbf{w}}\mathcal{L}\)</span>.</p>
+</section>
+</section>
+<section id="acceptance" class="level1">
+<h1>Acceptance</h1>
+<ul>
+<li>Precise target language (conditional on inspection / wildfire exposure, not a premium).</li>
+<li>No address or APN in what you submit.</li>
+<li>Logistic model is PyTorch logits + <code>BCEWithLogitsLoss</code>.</li>
+<li>Validation numbers use the supplied split.</li>
+</ul>
 
 
 <!-- -->
@@ -704,72 +714,79 @@ window.Quarto = {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Project 1"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Project 1 — Week 1 stepping stone"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "DATA 422: Advanced Data Science Methods and Ethics"</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf: default</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](project-1.pdf)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](project-1-week-01.pdf)</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>**Due (full package):** Friday, October 2\</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>**Weight:** 20% of the course (stepping stones count toward this project, not toward labs)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>**Due:** Wednesday, September 2, 11:59 p.m.\</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>**Counts toward:** <span class="co">[</span><span class="ot">Project 1</span><span class="co">](../projects/project-1.qmd)</span> (not a lab grade)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Wildfire insurance AI lab: a **risk model** (Model 1) and later an **evidence-to-text** model (Model 2). Weeks 1–2 are only Model 1.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Lab 1 practice questions are ungraded. This checkpoint is the start of the wildfire risk model.</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Target (do not loosen this language)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># What to submit</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>We estimate</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>A short write-up (PDF or notebook) with four pieces.</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>$$\mathbb{P}(\texttt{serious<span class="sc">\_</span>damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})$$</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Target contract (one paragraph)</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>In your own words, state:</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">`serious_damage`</span> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>This is **not** an annual household loss probability, **not** a premium, and **not** a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stepping stones</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1</span><span class="co">](../stepping-stones/project-1-week-01.qmd)</span> <span class="pp">|</span> Wed Sep 2, 11:59 p.m. <span class="pp">|</span> Contract + PyTorch logistic baseline <span class="pp">|</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>::: {.content-hidden}</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Later stones: remove the {.content-hidden} fence to publish. --&gt;</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2</span><span class="co">](../stepping-stones/project-1-week-02.qmd)</span> <span class="pp">|</span> Wed Sep 9, 11:59 p.m. <span class="pp">|</span> Neural Model 1 vs logistic; tiny-batch test <span class="pp">|</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Weeks 3–6 <span class="pp">|</span> on those pages when posted <span class="pp">|</span> packets, LoRA vs template, federation, package <span class="pp">|</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model 1 in PyTorch</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>Same loop as *The Hundred-Page Language Models Book* and Karpathy:</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 1:** <span class="in">`nn.Linear(n_features, 1)`</span> — logistic, $z = \mathbf{w}^\top \mathbf{x} + b$.</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 2:** a small MLP (<span class="in">`RiskMLP`</span>) with the same loss.</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>You will receive a de-identified table (<span class="in">`properties_modeling.csv`</span>) with a <span class="in">`split`</span> column (<span class="in">`train`</span> / <span class="in">`validation`</span> / <span class="in">`test`</span>). Fit on train, make choices on validation, leave test until the final package.</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>The instructor table is built from public <span class="co">[</span><span class="ot">CAL FIRE DINS</span><span class="co">](https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data)</span>. Street, APN, and coordinates are stripped before you see it.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the **unit** (one de-identified structure / DINS inspection);</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the **label** <span class="in">`serious_damage`</span> (Major or Destroyed = 1; No Damage, Affected, Minor = 0);</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the **conditioning**: the structure was inspected in or near a wildfire perimeter;</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>what this number is **not** (not annual household risk, not a premium, not a coverage decision).</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Privacy and leakage (short list)</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>Confirm the released table has no street address, APN, or lat/lon.</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>Name **two** fields you would *not* treat as pre-fire features if they appeared (examples: defensive actions taken during the fire, counts of burned cars). Say why.</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. PyTorch logistic baseline</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>Fit logistic regression **in PyTorch**. Lab 1 used the book’s `Sequential` + `Sigmoid` + `BCELoss` on a toy example. This stone uses the numerically stabler wrapper: one linear layer, **logits**, <span class="in">`BCEWithLogitsLoss`</span> (same $\hat y = \sigma(z)$).</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>Use the instructor table and the supplied <span class="in">`split`</span> column. Fit on <span class="in">`train`</span>. Report on <span class="in">`validation`</span> (leave <span class="in">`test`</span> alone).</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="in">``` python</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Linear(n_features, <span class="dv">1</span>)          <span class="co"># z = Wx + b</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>criterion <span class="op">=</span> nn.BCEWithLogitsLoss()</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.AdamW(model.parameters(), lr<span class="op">=</span><span class="fl">3e-3</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x).squeeze(<span class="op">-</span><span class="dv">1</span>)             <span class="co"># (B,)</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> criterion(logits, y)               <span class="co"># y in {0, 1}</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Do **not** use <span class="in">`sklearn.linear_model.LogisticRegression`</span> for this stone. DATA 322 already did the closed-form / sklearn version; here the point is the training loop you will reuse for the MLP.</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>Report:</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>training-set prevalence of <span class="in">`serious_damage`</span>;</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>validation loss, and either ROC-AUC or Brier score;</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a confusion table at **one** probability threshold you chose;</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one sentence on why that threshold is a **decision**, not a property of $z$.</span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu"># Labs vs this project</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. One training-loop check</span></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>Tuesday labs are ungraded **Colab** notebooks (practice for the Friday **paper** quiz). They are not stepping stones. The stones on this page are the project checkpoints.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>Paste a few lines showing <span class="in">`zero_grad`</span> → forward → <span class="in">`loss.backward()`</span> → <span class="in">`optimizer.step()`</span>, and state which of those produces $\nabla_{\mathbf{w}}\mathcal{L}$.</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acceptance</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Precise target language (conditional on inspection / wildfire exposure, not a premium).</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No address or APN in what you submit.</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Logistic model is PyTorch logits + <span class="in">`BCEWithLogitsLoss`</span>.</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Validation numbers use the supplied split.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

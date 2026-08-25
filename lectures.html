@@ -108,6 +108,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="assets/css/fickle-hill-theme.css">
 </head>
@@ -123,7 +152,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#related-materials-already-on-the-site" id="toc-related-materials-already-on-the-site" class="nav-link active" data-scroll-target="#related-materials-already-on-the-site">Related materials already on the site</a></li>
+  <li><a href="#lectures" id="toc-lectures" class="nav-link active" data-scroll-target="#lectures">Lectures</a>
+  <ul class="collapse">
+  <li><a href="#week-1" id="toc-week-1" class="nav-link" data-scroll-target="#week-1">Week 1 — Contracts, loss, and tokens</a>
+  <ul class="collapse">
+  <li><a href="#course-path" id="toc-course-path" class="nav-link" data-scroll-target="#course-path">Course path</a></li>
+  <li><a href="#monday-syllabus-and-course-path" id="toc-monday-syllabus-and-course-path" class="nav-link" data-scroll-target="#monday-syllabus-and-course-path">Monday — Syllabus and course path</a></li>
+  <li><a href="#wednesday-wildfire-contract-and-chapter-1" id="toc-wednesday-wildfire-contract-and-chapter-1" class="nav-link" data-scroll-target="#wednesday-wildfire-contract-and-chapter-1">Wednesday — Wildfire contract and Chapter 1</a></li>
+  <li><a href="#friday-tokens-embeddings-likelihood" id="toc-friday-tokens-embeddings-likelihood" class="nav-link" data-scroll-target="#friday-tokens-embeddings-likelihood">Friday — Tokens, embeddings, likelihood</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lectures.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
@@ -155,18 +193,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="lectures.pdf">Download this page as PDF</a></p>
-<p>Lecture outlines and readings are still being migrated. Until full lecture pages exist, use the <a href="schedule">schedule</a>, <a href="assessments">labs</a>, and <a href="resources">resources</a>.</p>
-<section id="related-materials-already-on-the-site" class="level2">
-<h2 class="anchored" data-anchor-id="related-materials-already-on-the-site">Related materials already on the site</h2>
+<section id="lectures" class="level1">
+<h1>Lectures</h1>
+<p>Below each week is a <strong>course path</strong> (what to do that week) and <strong>learning objectives</strong> for each lecture — what you should be able to do when that class ends. Full notes will land on the linked pages; until then, use the textbook sections listed there.</p>
+<p>Textbook: Andriy Burkov, <em><a href="https://www.themlbook.com/wiki/doku.php?id=lm_book">The Hundred-Page Language Models Book</a></em> (free). Optional clips: <a href="https://karpathy.ai/zero-to-hero.html">Karpathy Zero-to-Hero</a>. Labs are <a href="./labs/lab-01.html">Colab notebooks</a>. Friday quizzes are <strong>paper, in class</strong>; study banks are under <a href="./quizzes.html">Quizzes</a>.</p>
+<hr>
+<section id="week-1" class="level2">
+<h2 class="anchored" data-anchor-id="week-1">Week 1 — Contracts, loss, and tokens</h2>
+<p><em>Aug 24–28. Project 1 starts; Model 1 is not a premium.</em></p>
+<section id="course-path" class="level3">
+<h3 class="anchored" data-anchor-id="course-path">Course path</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mon</td>
+<td><a href="lectures/week-01-monday">Week 1 Monday</a> — syllabus</td>
+</tr>
+<tr class="even">
+<td>Lab</td>
+<td><a href="labs/lab-01">Lab 1</a> · <a href="https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-01.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="odd">
+<td>Wed</td>
+<td><a href="lectures/week-01-wednesday">Week 1 Wednesday</a> — wildfire contract + Ch. 1</td>
+</tr>
+<tr class="even">
+<td>Fri</td>
+<td><a href="lectures/week-01-friday">Week 1 Friday</a> — Ch. 2 · <strong>paper Quiz 1</strong></td>
+</tr>
+<tr class="odd">
+<td>Study</td>
+<td><a href="quizzes/quiz-01-prep">Quiz 1 bank</a></td>
+</tr>
+<tr class="even">
+<td>Stone</td>
+<td><a href="stepping-stones/project-1-week-01">Project 1 week 1</a> (due Wed Sep 2, 11:59 p.m.)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="monday-syllabus-and-course-path" class="level3">
+<h3 class="anchored" data-anchor-id="monday-syllabus-and-course-path">Monday — Syllabus and course path</h3>
+<p><em>24 Aug · essential · no LM-book chapter yet</em></p>
 <ul>
-<li><a href="./stepping-stones/week-01-stepping-stones.html">Week 1 stepping stones</a></li>
-<li><a href="./labs/lab-01.html">Lab 1</a></li>
-<li><a href="./labs/lab-03.html">Lab 3: Data Structures</a></li>
+<li>Find the syllabus, schedule, lab Colab, quiz study bank, and Project 1 stepping stone.</li>
+<li>Distinguish <strong>ungraded Colab lab</strong>, <strong>paper Friday quiz</strong>, and <strong>project stepping stone</strong>.</li>
+<li>State the grade weights (quizzes 40%; three projects 20% each) and that there is no written final.</li>
+<li>Open Google Colab with a Humboldt account and name CPU vs GPU for these labs.</li>
+</ul>
+</section>
+<section id="wednesday-wildfire-contract-and-chapter-1" class="level3">
+<h3 class="anchored" data-anchor-id="wednesday-wildfire-contract-and-chapter-1">Wednesday — Wildfire contract and Chapter 1</h3>
+<p><em>26 Aug · essential · LM book Ch. 1</em></p>
+<ul>
+<li>Distinguish <strong>hazard</strong>, <strong>risk</strong>, <strong>observed damage</strong>, and a <strong>premium</strong> or coverage decision.</li>
+<li>State the Model 1 target as <span class="math inline">\(\mathbb{P}(\texttt{serious\_damage}=1 \mid \text{inspected in/near a fire perimeter})\)</span> and name what that probability is <strong>not</strong>.</li>
+<li>Define <span class="math inline">\(z\)</span> (logit), <span class="math inline">\(\hat y\)</span>, <span class="math inline">\(y\)</span>, and a scalar <strong>loss</strong>; say why we update opposite the gradient.</li>
+<li>Put <code>zero_grad</code>, forward, <code>backward</code>, and <code>step</code> in order and say which line writes <code>.grad</code>.</li>
+<li>Explain why street, APN, and lat/lon are stripped from the student table.</li>
+</ul>
+</section>
+<section id="friday-tokens-embeddings-likelihood" class="level3">
+<h3 class="anchored" data-anchor-id="friday-tokens-embeddings-likelihood">Friday — Tokens, embeddings, likelihood</h3>
+<p><em>28 Aug · essential · LM book Ch. 2 · paper Quiz 1 (Ch. 1 + Lab 1)</em></p>
+<ul>
+<li>Contrast a <strong>one-hot</strong> vector with a learned <strong>embedding</strong>.</li>
+<li>Interpret cosine similarity near <span class="math inline">\(1\)</span>, <span class="math inline">\(0\)</span>, and <span class="math inline">\(-1\)</span>.</li>
+<li>Describe <strong>tokenization</strong> and why the tokenizer changes sequence length <span class="math inline">\(T\)</span>.</li>
+<li>State what a bigram / next-token model is estimating and why <strong>lower NLL</strong> is better on the same data.</li>
 </ul>
 
 
 <!-- -->
 
+</section>
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Creative Commons Attribution-NonCommercial 4.0 International<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">(View License)</a></div></div></section></div></main> <!-- /main -->
@@ -636,13 +743,228 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](lectures.pdf)</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Lecture outlines and readings are still being migrated. Until full lecture pages exist, use the <span class="co">[</span><span class="ot">schedule</span><span class="co">](schedule)</span>, <span class="co">[</span><span class="ot">labs</span><span class="co">](assessments)</span>, and <span class="co">[</span><span class="ot">resources</span><span class="co">](resources)</span>.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lectures</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Related materials already on the site</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Below each week is a **course path** (what to do that week) and **learning objectives** for each lecture — what you should be able to do when that class ends. Full notes will land on the linked pages; until then, use the textbook sections listed there.</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Week 1 stepping stones</span><span class="co">](stepping-stones/week-01-stepping-stones.qmd)</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Lab 1</span><span class="co">](labs/lab-01.qmd)</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Lab 3: Data Structures</span><span class="co">](labs/lab-03.qmd)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Textbook: Andriy Burkov, *[The Hundred-Page Language Models Book](https://www.themlbook.com/wiki/doku.php?id=lm_book)* (free). Optional clips: [Karpathy Zero-to-Hero](https://karpathy.ai/zero-to-hero.html). Labs are [Colab notebooks](labs/lab-01.qmd). Friday quizzes are **paper, in class**; study banks are under <span class="co">[</span><span class="ot">Quizzes</span><span class="co">](quizzes.qmd)</span>.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Week 1 — Contracts, loss, and tokens {#week-1}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>*Aug 24–28. Project 1 starts; Model 1 is not a premium.*</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course path</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> Material <span class="pp">|</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mon <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1 Monday</span><span class="co">](lectures/week-01-monday)</span> — syllabus <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lab <span class="pp">|</span> <span class="co">[</span><span class="ot">Lab 1</span><span class="co">](labs/lab-01)</span> · <span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-01.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wed <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1 Wednesday</span><span class="co">](lectures/week-01-wednesday)</span> — wildfire contract + Ch. 1 <span class="pp">|</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fri <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1 Friday</span><span class="co">](lectures/week-01-friday)</span> — Ch. 2 · **paper Quiz 1** <span class="pp">|</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Study <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 1 bank</span><span class="co">](quizzes/quiz-01-prep)</span> <span class="pp">|</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> <span class="co">[</span><span class="ot">Project 1 week 1</span><span class="co">](stepping-stones/project-1-week-01)</span> (due Wed Sep 2, 11:59 p.m.) <span class="pp">|</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Monday — Syllabus and course path</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>*24 Aug · essential · no LM-book chapter yet*</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Find the syllabus, schedule, lab Colab, quiz study bank, and Project 1 stepping stone.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish **ungraded Colab lab**, **paper Friday quiz**, and **project stepping stone**.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State the grade weights (quizzes 40%; three projects 20% each) and that there is no written final.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Open Google Colab with a Humboldt account and name CPU vs GPU for these labs.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wednesday — Wildfire contract and Chapter 1</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>*26 Aug · essential · LM book Ch. 1*</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish **hazard**, **risk**, **observed damage**, and a **premium** or coverage decision.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State the Model 1 target as $\mathbb{P}(\texttt{serious<span class="sc">\_</span>damage}=1 \mid \text{inspected in/near a fire perimeter})$ and name what that probability is **not**.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Define $z$ (logit), $\hat y$, $y$, and a scalar **loss**; say why we update opposite the gradient.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Put <span class="in">`zero_grad`</span>, forward, <span class="in">`backward`</span>, and <span class="in">`step`</span> in order and say which line writes <span class="in">`.grad`</span>.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why street, APN, and lat/lon are stripped from the student table.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">### Friday — Tokens, embeddings, likelihood</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>*28 Aug · essential · LM book Ch. 2 · paper Quiz 1 (Ch. 1 + Lab 1)*</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contrast a **one-hot** vector with a learned **embedding**.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Interpret cosine similarity near $1$, $0$, and $-1$.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Describe **tokenization** and why the tokenizer changes sequence length $T$.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State what a bigram / next-token model is estimating and why **lower NLL** is better on the same data.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>::: {.content-hidden}</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Later weeks: remove the {.content-hidden} fence to publish. --&gt;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Week 2 — Sequences, attention, and images {#week-2}</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>*Aug 31–Sep 4. Tiny LM stays in lab; Model 1 is still tabular.*</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course path</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> Material <span class="pp">|</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mon <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2 Monday</span><span class="co">](lectures/week-02-monday)</span> — Ch. 3 RNNs <span class="pp">|</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lab <span class="pp">|</span> <span class="co">[</span><span class="ot">Lab 2</span><span class="co">](labs/lab-02)</span> · <span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-02.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wed <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2 Wednesday</span><span class="co">](lectures/week-02-wednesday)</span> — Ch. 4 Transformers <span class="pp">|</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fri <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2 Friday</span><span class="co">](lectures/week-02-friday)</span> — CNN appendix · **paper Quiz 2** <span class="pp">|</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Study <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 2 bank</span><span class="co">](quizzes/quiz-02-prep)</span> <span class="pp">|</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> <span class="co">[</span><span class="ot">Project 1 week 2</span><span class="co">](stepping-stones/project-1-week-02)</span> (due Wed Sep 9, 11:59 p.m.) <span class="pp">|</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">### Monday — RNNs</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>*31 Aug · essential · LM book Ch. 3*</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Describe how an RNN **hidden state** carries information across time.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain **weight sharing** across time steps.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Outline **backpropagation through time** and why long-range credit assignment is hard.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Say why vanishing/exploding gradients motivate **attention**.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wednesday — Attention and Transformers</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>*2 Sep · essential · LM book Ch. 4*</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State the roles of **queries, keys, and values** in self-attention.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain the $1/\sqrt{d_k}$ scaling and a **causal mask** in a decoder-only LM.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Say why a Transformer needs **positional** information.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Give the usual GPT training objective and the meaning of a **context window**.</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Read attention-score shapes: <span class="in">`q @ k.transpose`</span> on <span class="in">`(B, H, T, D)`</span>.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Friday — CNNs, U-Nets, wildfire representations</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>*4 Sep · essential · LM book CNN appendix · paper Quiz 2 (Ch. 2–3 + Lab 2)*</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Describe a convolution **kernel**, **channels**, and **feature maps** (1D text vs 2D image).</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sketch a **U-Net**: encoder, bottleneck, decoder, skip connections.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contrast a **spatial** segmentation output with a **scalar** risk logit.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why an open wildfire **image** model can have a different **target contract** than DINS <span class="in">`serious_damage`</span>.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## Week 3 — Adaptation, evidence, LoRA {#week-3}</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>*Sep 7–11. Monday is Labor Day (no class).*</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course path</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> Material <span class="pp">|</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mon <span class="pp">|</span> Labor Day — no lecture <span class="pp">|</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lab <span class="pp">|</span> <span class="co">[</span><span class="ot">Lab 3</span><span class="co">](labs/lab-03)</span> · <span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-03.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wed <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 3 Wednesday</span><span class="co">](lectures/week-03-wednesday)</span> — Ch. 5 pretraining and adaptation <span class="pp">|</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fri <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 3 Friday</span><span class="co">](lectures/week-03-friday)</span> — SFT, LoRA, hallucination <span class="pp">|</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Week 3 packet stone (due Wed Sep 16; page posts with the draft) <span class="pp">|</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wednesday — Pretraining and adaptation</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>*9 Sep · essential · LM book Ch. 5 (scale, pretraining, adaptation)*</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish training from scratch, **frozen** features plus a head, partial fine-tuning, and full fine-tuning.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why a pretrained model’s **original input/target contract** matters before you reuse it.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Describe a **local** attribution (e.g. Integrated Gradients) as a statement about the fitted model, not a cause.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Say what an IG **baseline/reference** is for.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">### Friday — SFT, LoRA, hallucination</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>*11 Sep · essential · LM book Ch. 5 (SFT, LoRA, hallucination, ethics)*</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State the LoRA update $W' = W + BA$ and what **rank** $r$ controls.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contrast **trainable** adapter parameters with frozen $W$; say what an adapter checkpoint stores.</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Define **hallucination** for a memo that must copy an evidence packet.</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why a **deterministic template** belongs in the comparison, not only an LM.</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Week 4 — Calibration, faithfulness, open models {#week-4}</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>*Sep 14–18. Quiz 3 covers Ch. 4, the CNN appendix, and Labs 3–4.*</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course path</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> Material <span class="pp">|</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mon <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 4 Monday</span><span class="co">](lectures/week-04-monday)</span> — calibration, thresholds, abstention <span class="pp">|</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lab <span class="pp">|</span> <span class="co">[</span><span class="ot">Lab 4</span><span class="co">](labs/lab-04)</span> · <span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-04.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wed <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 4 Wednesday</span><span class="co">](lectures/week-04-wednesday)</span> — when an LLM beats a template <span class="pp">|</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fri <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 4 Friday</span><span class="co">](lectures/week-04-friday)</span> — Ch. 6 start · **paper Quiz 3** <span class="pp">|</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Study <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 3 bank</span><span class="co">](quizzes/quiz-03-prep)</span> <span class="pp">|</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Week 4 faithfulness stone (due Wed Sep 23) <span class="pp">|</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Monday — Calibration and decisions</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>*14 Sep · essential · notes + Lab 4; Ch. 5 as needed*</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish **discrimination** (AUC) from **calibration** (Brier, reliability).</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain temperature scaling $\hat y = \sigma(z/T)$ fit on **validation** only.</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Treat a probability **threshold** as a policy, not a property of $z$.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>List allowed actions (review / abstain) and name actions the rule must **never** take (deny, nonrenew, premium).</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wednesday — Template vs language model</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>*16 Sep · essential · Lab 4 + Ch. 5 evaluation ideas*</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Define **probability fidelity** (text contains the packet’s $p$ to two decimals).</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Give a case where the **template** is the better system.</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why lower LM **loss** does not prove more faithful homeowner text.</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Spot **scope** failures: causal verbs, invented features, “premium” / “denied.”</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">### Friday — Open models and disagreement</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>*18 Sep · essential · LM book Ch. 6 start · paper Quiz 3*</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish **open weights** from **open training data**.</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why openness helps **auditability** but does not prove **validity**.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Treat disagreement between two credible models as information, not a bug to hide.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Name one reason a public leaderboard score is not a deployment license.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## Week 5 — Federation, systems, committee {#week-5}</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>*Sep 21–25. Quiz 4 is Ch. 5 + Lab 5.*</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course path</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> Material <span class="pp">|</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mon <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 5 Monday</span><span class="co">](lectures/week-05-monday)</span> — federated vs local vs centralized <span class="pp">|</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lab <span class="pp">|</span> <span class="co">[</span><span class="ot">Lab 5</span><span class="co">](labs/lab-05)</span> · <span class="co">[</span><span class="ot">Open in Colab</span><span class="co">](https://colab.research.google.com/github/roverhol/data422-private/blob/main/labs/lab-05.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wed <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 5 Wednesday</span><span class="co">](lectures/week-05-wednesday)</span> — Ch. 6 compression, VLMs, systems <span class="pp">|</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fri <span class="pp">|</span> <span class="co">[</span><span class="ot">Week 5 Friday</span><span class="co">](lectures/week-05-friday)</span> — model-risk committee · **paper Quiz 4** <span class="pp">|</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Study <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 4 bank</span><span class="co">](quizzes/quiz-04-prep)</span> <span class="pp">|</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Week 5 federation + threat-model stone (due Wed Sep 30) <span class="pp">|</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="fu">### Monday — Federated vs local vs pooled</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>*21 Sep · essential · Lab 5; optional [NIST on FL updates](https://www.nist.gov/blogs/cybersecurity-insights/protecting-model-updates-privacy-preserving-federated-learning)*</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Distinguish a federated **client** (simulated insurer) from an **observation** (household row).</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contrast **local-only**, **centralized** (pooled rows), and **FedAvg** (averaged weights).</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Write a sample-size-weighted average of client weights.</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why FedAvg is **not** differential privacy or secure aggregation by itself.</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Say why **worst-client** performance belongs next to the overall average.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="fu">### Wednesday — Compression, VLMs, systems</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>*23 Sep · essential · LM book Ch. 6 (compression, VLMs, systems)*</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Describe **quantization** or **distillation** and one quality/cost tradeoff.</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>State what a **KV cache** is for in autoregressive generation.</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Explain why a fluent **VLM** caption of a fire map may still have the wrong target contract for DINS damage.</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Give an example of a **systems** failure (device, dtype, OOM) that can look like a modeling failure if you only watch loss.</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="fu">### Friday — Model-risk committee</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>*25 Sep · essential · no new book chapter · paper Quiz 4 (Ch. 5 + Lab 5)*</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Recommend whether Model 1 should be used, and for **which target/action**.</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Recommend template-only vs template-plus-LM for homeowner text, with a faithfulness reason.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Say what happens on **disagreement** or **abstain**.</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Name one fact homeowners should be able to inspect and one field that should never be centralized.</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

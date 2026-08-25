@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project 1 – DATA 422 - Advanced Data Science Methods and Ethics</title>
+<title>Quiz 1 study bank – DATA 422 - Advanced Data Science Methods and Ethics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -152,13 +152,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#target-do-not-loosen-this-language" id="toc-target-do-not-loosen-this-language" class="nav-link active" data-scroll-target="#target-do-not-loosen-this-language">Target (do not loosen this language)</a></li>
-  <li><a href="#stepping-stones" id="toc-stepping-stones" class="nav-link" data-scroll-target="#stepping-stones">Stepping stones</a></li>
-  <li><a href="#model-1-in-pytorch" id="toc-model-1-in-pytorch" class="nav-link" data-scroll-target="#model-1-in-pytorch">Model 1 in PyTorch</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#labs-vs-this-project" id="toc-labs-vs-this-project" class="nav-link" data-scroll-target="#labs-vs-this-project">Labs vs this project</a></li>
+  <li><a href="#from-the-reading" id="toc-from-the-reading" class="nav-link active" data-scroll-target="#from-the-reading">From the Reading:</a></li>
+  <li><a href="#lab-code" id="toc-lab-code" class="nav-link" data-scroll-target="#lab-code">Lab / code</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="quiz-01-prep.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -169,8 +166,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Project 1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">DATA 422: Advanced Data Science Methods and Ethics</p>
+<div class="quarto-title-block"><div><h1 class="title">Quiz 1 study bank</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Chapter 1 + Lab 1 — Friday, August 28</p>
 </div>
 
 
@@ -187,59 +184,38 @@ window.Quarto = {
 </header>
 
 
-<p><a href="project-1.pdf">Download this page as PDF</a></p>
-<p><strong>Due (full package):</strong> Friday, October 2<br>
-<strong>Weight:</strong> 20% of the course (stepping stones count toward this project, not toward labs)</p>
-<p>Wildfire insurance AI lab: a <strong>risk model</strong> (Model 1) and later an <strong>evidence-to-text</strong> model (Model 2). Weeks 1–2 are only Model 1.</p>
-<section id="target-do-not-loosen-this-language" class="level1">
-<h1>Target (do not loosen this language)</h1>
-<p>We estimate</p>
-<p><span class="math display">\[\mathbb{P}(\texttt{serious\_damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})\]</span></p>
-<p>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</p>
-<p><code>serious_damage</code> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</p>
-<p>This is <strong>not</strong> an annual household loss probability, <strong>not</strong> a premium, and <strong>not</strong> a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</p>
+<p><a href="quiz-01-prep.pdf">Download this page as PDF</a></p>
+<p>The Friday quiz will have a <strong>few</strong> of these questions. Work the set. This first quiz will be graded on <strong>participation</strong>, not correctness.</p>
+<p><strong>Reading:</strong> <em>Hundred-Page Language Models Book</em> Ch. 1.<br>
+<strong>Lab:</strong> <a href="../labs/lab-01.html">Lab 1</a> notebook.</p>
+<section id="from-the-reading" class="level1">
+<h1>From the Reading:</h1>
+<ol type="1">
+<li><p><strong>[Concept]</strong> Consider the general model <span class="math inline">\(y=f(x)\)</span>. What are <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(f\)</span> in supervised learning? <em>(§1.2)</em></p></li>
+<li><p><strong>[Concept]</strong> List the four steps of the supervised ML process. <em>(§1.3)</em></p></li>
+<li><p><strong>[Concept]</strong> Why do we need a loss function? Give one example of a loss function that is appropriate for linear regression. <em>(§1.2–§1.3)</em></p></li>
+<li><p><strong>[Math]</strong> Rewrite <span class="math inline">\(y = wx + b\)</span> for two features using vector notation. <em>(§1.4)</em></p></li>
+<li><p><strong>[Math]</strong> For <span class="math inline">\([1,0]\)</span> and <span class="math inline">\([0,1]\)</span>: compute cosine similarity and say whether the vectors point the same way. <em>(§1.4)</em></p></li>
+<li><p><strong>[Concept]</strong> Are “parameters” and “weights” used interchangeably in this chapter? What are the parameters in <span class="math inline">\(y=wx+b\)</span>? <em>(§1.2)</em></p></li>
+<li><p><strong>[Concept]</strong> In logistic regression, consider the standard meaning of <span class="math inline">\(z\)</span>, <span class="math inline">\(\hat p\)</span>, <span class="math inline">\(\hat y\)</span>, and <span class="math inline">\(y\)</span>. Which is the logit, the predicted probability, the predicted label, and the observed label? <em>(§1.7–§1.8 + Lab 1)</em></p></li>
+<li><p><strong>[Math]</strong> Write the logistic model in standard notation and the sigmoid <span class="math inline">\(\sigma(z)\)</span>. <em>(§1.7)</em></p></li>
+<li><p><strong>[Math]</strong> Write the equation for binary cross-entropy for one example. <em>(§1.7)</em></p></li>
+<li><p><strong>[Concept]</strong> Why do we have to use iterative optimization (like gradient descent) for logistic regression? <em>(§1.7)</em></p></li>
+</ol>
 </section>
-<section id="stepping-stones" class="level1">
-<h1>Stepping stones</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Stone</th>
-<th>Due</th>
-<th>What you turn in</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="../stepping-stones/project-1-week-01.html">Week 1</a></td>
-<td>Wed Sep 2, 11:59 p.m.</td>
-<td>Contract + PyTorch logistic baseline</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="model-1-in-pytorch" class="level1">
-<h1>Model 1 in PyTorch</h1>
-<p>Same loop as <em>The Hundred-Page Language Models Book</em> and Karpathy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><strong>Week 1:</strong> <code>nn.Linear(n_features, 1)</code> — logistic, <span class="math inline">\(z = \mathbf{w}^\top \mathbf{x} + b\)</span>.</li>
-<li><strong>Week 2:</strong> a small MLP (<code>RiskMLP</code>) with the same loss.</li>
-</ul>
-<p>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</p>
-</section>
-<section id="data" class="level1">
-<h1>Data</h1>
-<p>You will receive a de-identified table (<code>properties_modeling.csv</code>) with a <code>split</code> column (<code>train</code> / <code>validation</code> / <code>test</code>). Fit on train, make choices on validation, leave test until the final package.</p>
-<p>The instructor table is built from public <a href="https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data">CAL FIRE DINS</a>. Street, APN, and coordinates are stripped before you see it.</p>
-</section>
-<section id="labs-vs-this-project" class="level1">
-<h1>Labs vs this project</h1>
-<p>Tuesday labs are ungraded <strong>Colab</strong> notebooks (practice for the Friday <strong>paper</strong> quiz). They are not stepping stones. The stones on this page are the project checkpoints.</p>
+<section id="lab-code" class="level1">
+<h1>Lab / code</h1>
+<ol start="11" type="1">
+<li><p><strong>[Code]</strong> What does <code>loss.backward()</code> compute, and what does <code>optimizer.step()</code> do next?</p></li>
+<li><p><strong>[Code]</strong> In</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    nn.Linear(<span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    nn.Sigmoid()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>what do <code>2</code> and <code>1</code> represent? Which tensor is <span class="math inline">\(z\)</span>, and which is <span class="math inline">\(\hat p\)</span>? How do you get <span class="math inline">\(\hat y\)</span> from <span class="math inline">\(\hat p\)</span>?</p></li>
+<li><p><strong>[Math]</strong> Suppose we have <code>layer = nn.Linear(12, 1)</code>. How many <strong>trainable</strong> numbers (weights + bias) are in this layer? If the input has shape <code>(32, 12)</code>, what is the output shape?</p></li>
+<li><p><strong>[Lab]</strong> Suppose that network has almost zero training loss on a tiny dataset. Name a potential problem.</p></li>
+</ol>
 
 
 <!-- -->
@@ -704,72 +680,60 @@ window.Quarto = {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Project 1"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "DATA 422: Advanced Data Science Methods and Ethics"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Quiz 1 study bank"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Chapter 1 + Lab 1 — Friday, August 28"</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf: default</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](project-1.pdf)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](quiz-01-prep.pdf)</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>**Due (full package):** Friday, October 2\</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>**Weight:** 20% of the course (stepping stones count toward this project, not toward labs)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Wildfire insurance AI lab: a **risk model** (Model 1) and later an **evidence-to-text** model (Model 2). Weeks 1–2 are only Model 1.</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>The Friday quiz will have a **few** of these questions. Work the set. This first quiz will be graded on **participation**, not correctness.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>**Reading:** *Hundred-Page Language Models Book* Ch. 1.\</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>**Lab:** <span class="co">[</span><span class="ot">Lab 1</span><span class="co">](../labs/lab-01.qmd)</span> notebook.</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Target (do not loosen this language)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># From the Reading:</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>We estimate</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**\[Concept\]** Consider the general model $y=f(x)$. What are $x$, $y$, and $f$ in supervised learning? *(§1.2)*</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>$$\mathbb{P}(\texttt{serious<span class="sc">\_</span>damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})$$</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**\[Concept\]** List the four steps of the supervised ML process. *(§1.3)*</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**\[Concept\]** Why do we need a loss function? Give one example of a loss function that is appropriate for linear regression. *(§1.2–§1.3)*</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">`serious_damage`</span> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**\[Math\]** Rewrite $y = wx + b$ for two features using vector notation. *(§1.4)*</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>This is **not** an annual household loss probability, **not** a premium, and **not** a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>**\[Math\]** For $<span class="co">[</span><span class="ot">1,0</span><span class="co">]</span>$ and $<span class="co">[</span><span class="ot">0,1</span><span class="co">]</span>$: compute cosine similarity and say whether the vectors point the same way. *(§1.4)*</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stepping stones</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>**\[Concept\]** Are “parameters” and “weights” used interchangeably in this chapter? What are the parameters in $y=wx+b$? *(§1.2)*</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1</span><span class="co">](../stepping-stones/project-1-week-01.qmd)</span> <span class="pp">|</span> Wed Sep 2, 11:59 p.m. <span class="pp">|</span> Contract + PyTorch logistic baseline <span class="pp">|</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>**\[Concept\]** In logistic regression, consider the standard meaning of $z$, $\hat p$, $\hat y$, and $y$. Which is the logit, the predicted probability, the predicted label, and the observed label? *(§1.7–§1.8 + Lab 1)*</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">8.  </span>**\[Math\]** Write the logistic model in standard notation and the sigmoid $\sigma(z)$. *(§1.7)*</span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>::: {.content-hidden}</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Later stones: remove the {.content-hidden} fence to publish. --&gt;</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2</span><span class="co">](../stepping-stones/project-1-week-02.qmd)</span> <span class="pp">|</span> Wed Sep 9, 11:59 p.m. <span class="pp">|</span> Neural Model 1 vs logistic; tiny-batch test <span class="pp">|</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Weeks 3–6 <span class="pp">|</span> on those pages when posted <span class="pp">|</span> packets, LoRA vs template, federation, package <span class="pp">|</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">9.  </span>**\[Math\]** Write the equation for binary cross-entropy for one example. *(§1.7)*</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>**\[Concept\]** Why do we have to use iterative optimization (like gradient descent) for logistic regression? *(§1.7)*</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lab / code</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>**\[Code\]** What does <span class="in">`loss.backward()`</span> compute, and what does <span class="in">`optimizer.step()`</span> do next?</span>
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model 1 in PyTorch</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>**\[Code\]** In</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>Same loop as *The Hundred-Page Language Models Book* and Karpathy:</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 1:** <span class="in">`nn.Linear(n_features, 1)`</span> — logistic, $z = \mathbf{w}^\top \mathbf{x} + b$.</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 2:** a small MLP (<span class="in">`RiskMLP`</span>) with the same loss.</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>You will receive a de-identified table (<span class="in">`properties_modeling.csv`</span>) with a <span class="in">`split`</span> column (<span class="in">`train`</span> / <span class="in">`validation`</span> / <span class="in">`test`</span>). Fit on train, make choices on validation, leave test until the final package.</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>The instructor table is built from public <span class="co">[</span><span class="ot">CAL FIRE DINS</span><span class="co">](https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data)</span>. Street, APN, and coordinates are stripped before you see it.</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu"># Labs vs this project</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>Tuesday labs are ungraded **Colab** notebooks (practice for the Friday **paper** quiz). They are not stepping stones. The stones on this page are the project checkpoints.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="in">``` python</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        nn.Linear(<span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        nn.Sigmoid()</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="in">```</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    what do <span class="in">`2`</span> and <span class="in">`1`</span> represent? Which tensor is $z$, and which is $\hat p$? How do you get $\hat y$ from $\hat p$?</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>**\[Math\]** Suppose we have `layer = nn.Linear(12, 1)`. How many **trainable** numbers (weights + bias) are in this layer? If the input has shape <span class="in">`(32, 12)`</span>, what is the output shape?</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>**\[Lab\]** Suppose that network has almost zero training loss on a tiny dataset. Name a potential problem.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

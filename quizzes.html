@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project 1 – DATA 422 - Advanced Data Science Methods and Ethics</title>
+<title>Quizzes – DATA 422 - Advanced Data Science Methods and Ethics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -64,22 +64,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,37 +108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../assets/css/fickle-hill-theme.css">
+<link rel="stylesheet" href="assets/css/fickle-hill-theme.css">
 </head>
 
 <body class="floating quarto-light">
@@ -147,35 +118,23 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#target-do-not-loosen-this-language" id="toc-target-do-not-loosen-this-language" class="nav-link active" data-scroll-target="#target-do-not-loosen-this-language">Target (do not loosen this language)</a></li>
-  <li><a href="#stepping-stones" id="toc-stepping-stones" class="nav-link" data-scroll-target="#stepping-stones">Stepping stones</a></li>
-  <li><a href="#model-1-in-pytorch" id="toc-model-1-in-pytorch" class="nav-link" data-scroll-target="#model-1-in-pytorch">Model 1 in PyTorch</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#labs-vs-this-project" id="toc-labs-vs-this-project" class="nav-link" data-scroll-target="#labs-vs-this-project">Labs vs this project</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-</nav>
+  
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="quizzes.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Project 1</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Quizzes</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">DATA 422: Advanced Data Science Methods and Ethics</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -187,64 +146,31 @@ window.Quarto = {
 </header>
 
 
-<p><a href="project-1.pdf">Download this page as PDF</a></p>
-<p><strong>Due (full package):</strong> Friday, October 2<br>
-<strong>Weight:</strong> 20% of the course (stepping stones count toward this project, not toward labs)</p>
-<p>Wildfire insurance AI lab: a <strong>risk model</strong> (Model 1) and later an <strong>evidence-to-text</strong> model (Model 2). Weeks 1–2 are only Model 1.</p>
-<section id="target-do-not-loosen-this-language" class="level1">
-<h1>Target (do not loosen this language)</h1>
-<p>We estimate</p>
-<p><span class="math display">\[\mathbb{P}(\texttt{serious\_damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})\]</span></p>
-<p>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</p>
-<p><code>serious_damage</code> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</p>
-<p>This is <strong>not</strong> an annual household loss probability, <strong>not</strong> a premium, and <strong>not</strong> a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</p>
-</section>
-<section id="stepping-stones" class="level1">
-<h1>Stepping stones</h1>
+<p>Friday quizzes are 40% of the course (15 points each). They are on paper, in class, in the first 10 minutes of Friday lecture (11:00–11:10 a.m.).</p>
+<p>Each scored quiz is a short subset of that week’s study bank. Work the whole bank. Quiz items can come from the lab as well as lecture and the book or other assigned reading.</p>
+<p>This Friday (Aug 28) is <strong>participation</strong>, not correctness.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Stone</th>
-<th>Due</th>
-<th>What you turn in</th>
+<th>Quiz</th>
+<th>Date</th>
+<th>Study bank</th>
+<th>Covers</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="../stepping-stones/project-1-week-01.html">Week 1</a></td>
-<td>Wed Sep 2, 11:59 p.m.</td>
-<td>Contract + PyTorch logistic baseline</td>
+<td>1</td>
+<td>Fri Aug 28</td>
+<td><a href="quiz-01-prep.qmd">Quiz 1 prep</a></td>
+<td>Ch. 1 + Lab 1</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="model-1-in-pytorch" class="level1">
-<h1>Model 1 in PyTorch</h1>
-<p>Same loop as <em>The Hundred-Page Language Models Book</em> and Karpathy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><strong>Week 1:</strong> <code>nn.Linear(n_features, 1)</code> — logistic, <span class="math inline">\(z = \mathbf{w}^\top \mathbf{x} + b\)</span>.</li>
-<li><strong>Week 2:</strong> a small MLP (<code>RiskMLP</code>) with the same loss.</li>
-</ul>
-<p>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</p>
-</section>
-<section id="data" class="level1">
-<h1>Data</h1>
-<p>You will receive a de-identified table (<code>properties_modeling.csv</code>) with a <code>split</code> column (<code>train</code> / <code>validation</code> / <code>test</code>). Fit on train, make choices on validation, leave test until the final package.</p>
-<p>The instructor table is built from public <a href="https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data">CAL FIRE DINS</a>. Street, APN, and coordinates are stripped before you see it.</p>
-</section>
-<section id="labs-vs-this-project" class="level1">
-<h1>Labs vs this project</h1>
-<p>Tuesday labs are ungraded <strong>Colab</strong> notebooks (practice for the Friday <strong>paper</strong> quiz). They are not stepping stones. The stones on this page are the project checkpoints.</p>
 
 
 <!-- -->
 
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Creative Commons Attribution-NonCommercial 4.0 International<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">(View License)</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -703,73 +629,34 @@ window.Quarto = {
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Project 1"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "DATA 422: Advanced Data Science Methods and Ethics"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf: default</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Download this page as PDF</span><span class="co">](project-1.pdf)</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>**Due (full package):** Friday, October 2\</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>**Weight:** 20% of the course (stepping stones count toward this project, not toward labs)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Wildfire insurance AI lab: a **risk model** (Model 1) and later an **evidence-to-text** model (Model 2). Weeks 1–2 are only Model 1.</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Target (do not loosen this language)</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>We estimate</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>$$\mathbb{P}(\texttt{serious<span class="sc">\_</span>damage}=1 \mid \text{structure inspected in or near a wildfire perimeter})$$</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>using de-identified CAL FIRE DINS construction features (and later, optional location-derived hazard layers).</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">`serious_damage`</span> is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>This is **not** an annual household loss probability, **not** a premium, and **not** a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Stepping stones</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 1</span><span class="co">](../stepping-stones/project-1-week-01.qmd)</span> <span class="pp">|</span> Wed Sep 2, 11:59 p.m. <span class="pp">|</span> Contract + PyTorch logistic baseline <span class="pp">|</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>::: {.content-hidden}</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Later stones: remove the {.content-hidden} fence to publish. --&gt;</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stone <span class="pp">|</span> Due <span class="pp">|</span> What you turn in <span class="pp">|</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----|------------------|</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Week 2</span><span class="co">](../stepping-stones/project-1-week-02.qmd)</span> <span class="pp">|</span> Wed Sep 9, 11:59 p.m. <span class="pp">|</span> Neural Model 1 vs logistic; tiny-batch test <span class="pp">|</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Weeks 3–6 <span class="pp">|</span> on those pages when posted <span class="pp">|</span> packets, LoRA vs template, federation, package <span class="pp">|</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model 1 in PyTorch</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>Same loop as *The Hundred-Page Language Models Book* and Karpathy:</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(x)                 <span class="co"># z, not probabilities</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.BCEWithLogitsLoss()(logits, y)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>loss.backward()</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>optimizer.step()</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 1:** <span class="in">`nn.Linear(n_features, 1)`</span> — logistic, $z = \mathbf{w}^\top \mathbf{x} + b$.</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 2:** a small MLP (<span class="in">`RiskMLP`</span>) with the same loss.</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Do not use sklearn for the graded Model 1 fits. Encoding categoricals with pandas is fine.</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>You will receive a de-identified table (<span class="in">`properties_modeling.csv`</span>) with a <span class="in">`split`</span> column (<span class="in">`train`</span> / <span class="in">`validation`</span> / <span class="in">`test`</span>). Fit on train, make choices on validation, leave test until the final package.</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>The instructor table is built from public <span class="co">[</span><span class="ot">CAL FIRE DINS</span><span class="co">](https://data.ca.gov/dataset/cal-fire-damage-inspection-dins-data)</span>. Street, APN, and coordinates are stripped before you see it.</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu"># Labs vs this project</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>Tuesday labs are ungraded **Colab** notebooks (practice for the Friday **paper** quiz). They are not stepping stones. The stones on this page are the project checkpoints.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Quizzes"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "DATA 422: Advanced Data Science Methods and Ethics"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf: default</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Friday quizzes are 40% of the course (15 points each). They are on paper, in class, in the first 10 minutes of Friday lecture (11:00–11:10 a.m.).</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Each scored quiz is a short subset of that week’s study bank. Work the whole bank. Quiz items can come from the lab as well as lecture and the book or other assigned reading.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>This Friday (Aug 28) is **participation**, not correctness.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quiz <span class="pp">|</span> Date <span class="pp">|</span> Study bank <span class="pp">|</span> Covers <span class="pp">|</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------------|----------------|------------------------|----------------|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 <span class="pp">|</span> Fri Aug 28 <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 1 prep</span><span class="co">](quiz-01-prep.qmd)</span> <span class="pp">|</span> Ch. 1 + Lab 1 <span class="pp">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>::: {.content-hidden}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Later quizzes: remove the {.content-hidden} fence to publish. --&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quiz <span class="pp">|</span> Date <span class="pp">|</span> Study bank <span class="pp">|</span> Covers <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------------|----------------|------------------------|----------------|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> Fri Sep 4 <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 2 prep</span><span class="co">](quiz-02-prep.qmd)</span> <span class="pp">|</span> Ch. 2–3 + Lab 2 <span class="pp">|</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3 <span class="pp">|</span> Fri Sep 18 <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 3 prep</span><span class="co">](quiz-03-prep.qmd)</span> <span class="pp">|</span> Ch. 4, CNN appendix, Labs 3–4 <span class="pp">|</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 <span class="pp">|</span> Fri Sep 25 <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 4 prep</span><span class="co">](quiz-04-prep.qmd)</span> <span class="pp">|</span> Ch. 5 + Lab 5 <span class="pp">|</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 5 <span class="pp">|</span> Fri Oct 2 <span class="pp">|</span> <span class="co">[</span><span class="ot">Quiz 5 prep</span><span class="co">](quiz-05-prep.qmd)</span> <span class="pp">|</span> Ch. 6 <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
