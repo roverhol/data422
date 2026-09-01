@@ -33,33 +33,5 @@
     "title": "DATA 422: Advanced Data Science Methods and Ethics",
     "section": "Grading snapshot",
     "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nDetails are on Assessments and the syllabus."
-  },
-  {
-    "objectID": "labs/lab-02.html",
-    "href": "labs/lab-02.html",
-    "title": "Lab 2",
-    "section": "",
-    "text": "Download this page as PDF\nUngraded. Paper quiz Friday from the Quiz 2 study bank (this lab + Ch. 2–3).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-02.ipynb. CPU runtime.\n\n\nWhat you will do\n\nTiny next-character LM (Karpathy loop) — not the insurance model.\nJIT: object-oriented Python for nn.Module (class, self, super(), forward).\nRiskMLP shapes, parameter count, tiny-batch overfit.\n\nExercises print a desired shape, count, or accuracy so you can self-check.\n\n\nProject (separate)\nProject 1 week 2\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
-    "objectID": "labs/lab-03.html",
-    "href": "labs/lab-03.html",
-    "title": "Lab 3",
-    "section": "",
-    "text": "Download this page as PDF\nUngraded. Attributions, evidence packets, LoRA as \\(W' = W+BA\\). Paper Quiz 3 is Fri Sep 18 (this lab + Lab 4 + Ch. 4 + CNN appendix).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-03.ipynb. CPU. Toy tensors — your Project 1 IG uses the wildfire MLP.\n\n\nProject (separate)\nWeek 3 stepping stone (draft until posted): packets from your Model 1.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
-    "objectID": "labs/lab-04.html",
-    "href": "labs/lab-04.html",
-    "title": "Lab 4",
-    "section": "",
-    "text": "Download this page as PDF\nUngraded. Template memos, temperature scaling, probability fidelity. Paper Quiz 3 (Fri Sep 18).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-04.ipynb. CPU.\n\n\nProject (separate)\nWeek 4 stone: template vs LoRA faithfulness on held-out packets.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
-  },
-  {
-    "objectID": "labs/lab-05.html",
-    "href": "labs/lab-05.html",
-    "title": "Lab 5",
-    "section": "",
-    "text": "Download this page as PDF\nUngraded. Local vs pooled vs FedAvg. Paper Quiz 4 (Fri Sep 25) plus the in-class model-risk committee.\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-05.ipynb. CPU. The notebook is a simulation; all tensors already live in one Colab, so it is not a privacy guarantee.\n\n\nProject (separate)\nWeek 5 stone: client table, three training stories, threat sketch.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
   }
 ]
