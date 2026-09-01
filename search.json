@@ -33,5 +33,278 @@
     "title": "DATA 422: Advanced Data Science Methods and Ethics",
     "section": "Grading snapshot",
     "text": "Grading snapshot\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nDetails are on Assessments and the syllabus."
+  },
+  {
+    "objectID": "assessments.html",
+    "href": "assessments.html",
+    "title": "Assessments",
+    "section": "",
+    "text": "Download this page as PDF\n\nOverview\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\nThere are no midterms and no written final exam. Project 3 uses the final-exam time slot as a work session.\nLabs are Colab demos and practice (Open in Colab on each lab page). They are not a grade. Friday paper quizzes (first 10 minutes of lecture) cover that week’s lab, lecture, and assigned reading or videos.\nStepping stones are project checkpoints. They count toward the related project grade, not as a separate weight or lab score. They are due Wednesday, 11:59 p.m.\n\n\nQuizzes (40%)\nPaper, in class, Fridays starting August 28, 11:00–11:10 a.m. Each quiz is 15 points. Canvas listings are reminders and the gradebook (no online quiz). Each scored quiz is a short subset of that week’s study bank. Work the whole bank:\n\nQuiz 1 prep (Ch. 1 + Lab 1) — Fri Aug 28\n\n\n\nProjects (20% + 20% + 20%)\n\n\nStepping stones\nStepping stones are project checkpoints (not lab points). Credit rolls into the related project grade. Due Wednesday, 11:59 p.m.\nProject 1:\n\nStone 1: EDA + first model — due Wed Sep 9, 11:59 p.m.\nDataset: properties_modeling_v4.csv · Data card\n\n\n\nLabs\nTuesday Colab notebooks. Open-in-Colab badge on each page. Not graded but please do them to prepare that week’s quiz..\n\nLab 1 — §1.3 logistic, sklearn/statsmodels, Sequential\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "data/project-1/data-card.html",
+    "href": "data/project-1/data-card.html",
+    "title": "Project 1 data card",
+    "section": "",
+    "text": "Download this page as PDF\nDataset: properties_modeling_v4.csv\nStudent release of the Model 1 table (v3 build). One file; splits are pre-assigned (incident-grouped)."
+  },
+  {
+    "objectID": "data/project-1/data-card.html#splits-do-not-reshuffle",
+    "href": "data/project-1/data-card.html#splits-do-not-reshuffle",
+    "title": "Project 1 data card",
+    "section": "Splits (do not reshuffle)",
+    "text": "Splits (do not reshuffle)\n\n\n\n\n\n\n\nsplit\nRole\n\n\n\n\ntrain\nFit models, compute imputation/encoding statistics\n\n\nselection\nCompare models, thresholds, hyperparameters, feature choices\n\n\nassessment\nOne final report — touch only after you lock your model"
+  },
+  {
+    "objectID": "data/project-1/data-card.html#outcome-columns",
+    "href": "data/project-1/data-card.html#outcome-columns",
+    "title": "Project 1 data card",
+    "section": "Outcome columns",
+    "text": "Outcome columns\n\n\n\n\n\n\n\nColumn\nDescription\n\n\n\n\ndamage_category\nDINS damage label (5 levels; use for baseline rates)\n\n\ndamage_ordinal\n0 = No Damage … 4 = Destroyed\n\n\ndamage_ratio_mid\nMidpoint damage fraction proxy\n\n\nserious_damage\nBinary (Major/Destroyed = 1) — common classification target"
+  },
+  {
+    "objectID": "data/project-1/data-card.html#feature-blocks-map-to-cdi-modules",
+    "href": "data/project-1/data-card.html#feature-blocks-map-to-cdi-modules",
+    "title": "Project 1 data card",
+    "section": "Feature blocks (map to CDI modules)",
+    "text": "Feature blocks (map to CDI modules)\n\nStructure s: structure_*, roof_construction, …, propane_tank_distance, outbuildings, cars_on_property\nExposure x: latitude, longitude, county, city, community, assessed_improved_value, elevation_m, slope_deg, …\nStatic hazard H: fhsz_category, wrc_burn_probability, wrc_risk_to_potential_structures\nEvent fire F: fire_inside_perimeter, fire_distance_km, fire_perimeter_acres"
+  },
+  {
+    "objectID": "data/project-1/data-card.html#original-data-sources-for-feature-documentation",
+    "href": "data/project-1/data-card.html#original-data-sources-for-feature-documentation",
+    "title": "Project 1 data card",
+    "section": "Original data sources (for feature documentation)",
+    "text": "Original data sources (for feature documentation)\n\n\n\nLayer\nSource\n\n\n\n\nDINS inspections\nCAL FIRE Damage Inspection (DINS)\n\n\nFire perimeters (event F)\nCalifornia Historical Fire Perimeters\n\n\nFHSZ\nCAL FIRE Fire Hazard Severity Zones\n\n\nWRC hazard rasters\nUSFS Wildfire Risk to Communities (RDS-2020-0016-2)\n\n\nElevation / slope\nUSGS 3DEP Elevation"
+  },
+  {
+    "objectID": "data/project-1/data-card.html#columns-to-treat-carefully",
+    "href": "data/project-1/data-card.html#columns-to-treat-carefully",
+    "title": "Project 1 data card",
+    "section": "Columns to treat carefully",
+    "text": "Columns to treat carefully\n\nIdentifiers (not features by default): property_id, global_id, incident_id, incident_name, address fields, apn\nPost-event (justify if used): defensive_actions, where_fire_started_on_structure, what_fire_started_from\nMetadata: fire_match_method, split"
+  },
+  {
+    "objectID": "data/project-1/data-card.html#caveats",
+    "href": "data/project-1/data-card.html#caveats",
+    "title": "Project 1 data card",
+    "section": "Caveats",
+    "text": "Caveats\n\nConditional sample: structures inspected in/near wildfires.\nMany structure fields are inspector-recorded after the fire.\n~5% of rows lack a matched fire perimeter (fire_distance_km missing)."
+  },
+  {
+    "objectID": "labs/lab-02.html",
+    "href": "labs/lab-02.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "Download this page as PDF\nUngraded. Paper quiz Friday from the Quiz 2 study bank (Ch. 2 + Lab 2).\n\nOpen in Colab\n\n\n\nOpen In Colab\n\n\nNotebook: lab-02.ipynb. CPU runtime.\n\n\nWhat you will do\n\nJIT OOP + nn.Module — class, self, __init__; then fit \\(\\sin x\\) + noise; plot data, true curve, and prediction; change depth, width, or activation from a config block.\nHeads — same skeleton for numeric (MSE), binary (one logit + BCEWithLogitsLoss), and three-class (softmax + cross_entropy).\nCh. 2 text — word tokenization (theLMbook style), nn.Embedding, next-token loss, perplexity.\n\nWildfire Model 1 is on the Project 1 stepping stone (due Wed Sep 9), not in this lab.\n\n\nBefore you leave\nWork the Quiz 2 study bank before Friday’s paper quiz.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "Lectures",
+    "section": "",
+    "text": "Download this page as PDF"
+  },
+  {
+    "objectID": "lectures.html#week-1",
+    "href": "lectures.html#week-1",
+    "title": "Lectures",
+    "section": "Week 1 — Contracts, loss, and tokens",
+    "text": "Week 1 — Contracts, loss, and tokens\nAug 24–28. Project 1 starts; Model 1 is not a premium.\n\nCourse path\n\n\n\nStep\nMaterial\n\n\n\n\nMon\nWeek 1 Monday — syllabus\n\n\nLab\nLab 1 · Open in Colab\n\n\nWed\nWeek 1 Wednesday — wildfire contract + Ch. 1\n\n\nFri\nWeek 1 Friday — Ch. 2 · paper Quiz 1\n\n\nStudy\nQuiz 1 bank\n\n\nStone\nProject 1 stone 1 (due Wed Sep 9, 11:59 p.m.)\n\n\n\n\n\nMonday — Syllabus and course path\n24 Aug · essential · no LM-book chapter yet\n\nFind the syllabus, schedule, lab Colab, quiz study bank, and Project 1 stepping stone.\nDistinguish ungraded Colab lab, paper Friday quiz, and project stepping stone.\nState the grade weights (quizzes 40%; three projects 20% each) and that there is no written final.\nOpen Google Colab with a Humboldt account and name CPU vs GPU for these labs.\n\n\n\nWednesday — Wildfire contract and Chapter 1\n26 Aug · essential · LM book Ch. 1\n\nDistinguish hazard, risk, observed damage, and a premium or coverage decision.\nState the Model 1 target as \\(\\mathbb{P}(\\texttt{serious\\_damage}=1 \\mid \\text{inspected in/near a fire perimeter})\\) and name what that probability is not.\nDefine \\(z\\) (logit), \\(\\hat y\\), \\(y\\), and a scalar loss; say why we update opposite the gradient.\nPut zero_grad, forward, backward, and step in order and say which line writes .grad.\nExplain why street, APN, and lat/lon are stripped from the student table.\n\n\n\nFriday — Tokens, embeddings, likelihood\n28 Aug · essential · LM book Ch. 2 · paper Quiz 1 (Ch. 1 + Lab 1)\n\nContrast a one-hot vector with a learned embedding.\nInterpret cosine similarity near \\(1\\), \\(0\\), and \\(-1\\).\nDescribe tokenization and why the tokenizer changes sequence length \\(T\\).\nState what a bigram / next-token model is estimating and why lower NLL is better on the same data."
+  },
+  {
+    "objectID": "projects/project-1.html",
+    "href": "projects/project-1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "Download this page as PDF\nDue (full package): Friday, October 2\nWeight: 20% of the course (stepping stones count toward this project, not toward labs)\nWildfire insurance AI lab: a risk model (Model 1) and later an evidence-to-text model (Model 2). Weeks 1–2 are only Model 1.\n\nTarget (do not loosen this language)\nWe estimate\n\\[\\mathbb{P}(\\texttt{serious\\_damage}=1 \\mid \\text{fire contact context},\\; s,\\; x,\\; \\mathcal{F}_{\\text{event}})\\]\nusing CAL FIRE DINS structure, exposure, and hazard-context features (see data card).\nserious_damage is 1 for Major or Destroyed, 0 for No Damage / Affected / Minor. Inaccessible rows are out of the supervised table.\nThis is not an annual household loss probability, not a premium, and not a coverage decision. A separate rule (threshold / abstain / specialist review) will turn scores into an action. Model 2 may describe that action; it may not invent coverage.\n\n\nStepping stones\n\n\n\nStone\nDue\nWhat you turn in\n\n\n\n\nStone 1\nWed Sep 9, 11:59 p.m.\nEDA + feature deep dive + first model on selection\n\n\n\n\n\nModel 1 workflow\nUse the modeling checklist from lecture: problem → data → model → loss → fit → evaluate on selection. PyTorch is fine but not required for stone 1.\n\n\nData\nDownload properties_modeling_v4.csv (also linked from stepping stone 1). The split column is pre-set:\n\n\n\nSplit\nRole\n\n\n\n\ntrain\nFit models; compute encoding / imputation statistics\n\n\nselection\nCompare models and metrics\n\n\nassessment\nFinal evaluation only (stone 2)\n\n\n\nColumn definitions and primary source links: Project 1 data card.\nThe table is built from public CAL FIRE DINS with joined hazard and fire-perimeter layers (see data card).\n\n\nLabs vs this project\nTuesday labs are ungraded Colab notebooks (practice for the Friday paper quiz). They are not stepping stones. The stones on this page are the project checkpoints.\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html",
+    "href": "stepping-stones/project-1-stone-01.html",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "",
+    "text": "Download this page as PDF\nDue: Wednesday, September 9, 11:59 p.m.\nCounts toward: Project 1 (not a lab grade)\nData: properties_modeling_v4.csv\nColumn dictionary: Data card\nStarter notebook: starter_01.ipynb"
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#a1.-baseline-damage-rates",
+    "href": "stepping-stones/project-1-stone-01.html#a1.-baseline-damage-rates",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "A1. Baseline damage rates",
+    "text": "A1. Baseline damage rates\nUsing the full table, compute a table of counts and proportions for damage_category (all five levels)."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#a2.-univariate-feature-scan",
+    "href": "stepping-stones/project-1-stone-01.html#a2.-univariate-feature-scan",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "A2. Univariate feature scan",
+    "text": "A2. Univariate feature scan\nFor every candidate feature column (all columns except identifiers, split, and the four outcome columns — see data card):\n\ntype (numeric vs categorical);\nmissingness count and %;\nfor numeric: mean, std, min, max (on train);\nfor categorical: number of levels and top 5 levels (on train).\n\nPresent as a compact table printed out in your notebook."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#a3.-choose-three-features-for-deep-dive",
+    "href": "stepping-stones/project-1-stone-01.html#a3.-choose-three-features-for-deep-dive",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "A3. Choose three features for deep dive",
+    "text": "A3. Choose three features for deep dive\nPick three features you might use in a model (mix of \\(s\\), \\(x\\), \\(H\\), or \\(\\mathcal{F}\\) if possible). For each:\n\nOriginal source — one paragraph with a link to the primary data documentation (start from the data card source table; follow through to DINS field definitions, FRAP FHSZ, WRC, or CAL FIRE perimeters as appropriate).\nMissingness — who is missing? Is missingness associated with serious_damage or damage_category?\nBivariate relationship — plots or tables vs damage_category and vs serious_damage (e.g. boxplots, grouped bar charts as appropriate)."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#b1.-problem-and-label",
+    "href": "stepping-stones/project-1-stone-01.html#b1.-problem-and-label",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "B1. Problem and label",
+    "text": "B1. Problem and label\nRestate the problem your model will solve, including the unit, class label, and feature summary."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#b2.-model-choice",
+    "href": "stepping-stones/project-1-stone-01.html#b2.-model-choice",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "B2. Model choice",
+    "text": "B2. Model choice\nChoose one simple model you can train, for example:\n\nlogistic regression;\na tree-based model;\na method from DATA 322;\nanother method you can justify.\n\nState input features (subset of columns), how you encode categoricals, and how you handle missing values (rules fit on train only)."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#b3.-loss-and-metric",
+    "href": "stepping-stones/project-1-stone-01.html#b3.-loss-and-metric",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "B3. Loss and metric",
+    "text": "B3. Loss and metric\n\nLoss for training (e.g. BCEWithLogitsLoss for binary serious_damage).\nChoose a metric for model comparison on selection (e.g. Brier score, ROC-AUC, accuracy)."
+  },
+  {
+    "objectID": "stepping-stones/project-1-stone-01.html#b4.-train-and-evaluate",
+    "href": "stepping-stones/project-1-stone-01.html#b4.-train-and-evaluate",
+    "title": "Project 1 — Stepping stone 1",
+    "section": "B4. Train and evaluate",
+    "text": "B4. Train and evaluate\n\nFit on train only.\nReport training loss curve or final training metric.\nEvaluate on selection — report your primary metric."
+  },
+  {
+    "objectID": "stepping-stones/project-1-week-02.html",
+    "href": "stepping-stones/project-1-week-02.html",
+    "title": "Project 1 — Week 2 stepping stone",
+    "section": "",
+    "text": "Download this page as PDF\nStatus: Not assigned yet.\nThe wildfire logistic + RiskMLP baseline that used to be split across week 1 and week 2 is now a single checkpoint:\n\nProject 1 stone 1 stepping stone — due Wednesday, September 9, 11:59 p.m.\n\nThis page will be updated when the next Project 1 checkpoint is ready (likely due a later Wednesday in September).\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Course Syllabus",
+    "section": "",
+    "text": "Download this page as PDF"
+  },
+  {
+    "objectID": "syllabus.html#course-information",
+    "href": "syllabus.html#course-information",
+    "title": "Course Syllabus",
+    "section": "Course information",
+    "text": "Course information\nCourse Number: DATA 422\nCourse Title: Advanced Data Science Methods and Ethics\nUnits: 4\nSemester: Fall 2026\nMode of Instruction: In person\nPrerequisite: DATA 322\nMinimum grade for major: C-\n\nLecture\nSection: DATA 422-10 (Class Number 42778)\nDays/Time: Monday, Wednesday, Friday, 11:00–11:50 a.m.\nLocation: NR 224\n\n\nLaboratory (Activity)\nSection: DATA 422-11 (Class Number 42779)\nDay/Time: Tuesday, 11:00 a.m.–12:50 p.m.\nLocation: BSS 313\n\n\nProject 3 presentations (final-exam slot)\nFriday, December 18, 2026, 10:20 a.m.–12:10 p.m., NR 224."
+  },
+  {
+    "objectID": "syllabus.html#instructor",
+    "href": "syllabus.html#instructor",
+    "title": "Course Syllabus",
+    "section": "Instructor",
+    "text": "Instructor\nInstructor: Dr. Rosanna Overholser\nEmail: rho3@humboldt.edu\nOffice: BSS 334\nPhone: 707-826-4020\nOffice hours: Wednesdays 12:30–2:30 p.m. in the Learning Center (first floor of the library); Thursdays 11:00–11:50 a.m. in BSS 334; or by appointment.\nPlease use your Cal Poly Humboldt email and check Canvas regularly for course communications."
+  },
+  {
+    "objectID": "syllabus.html#catalog-description",
+    "href": "syllabus.html#catalog-description",
+    "title": "Course Syllabus",
+    "section": "Catalog description",
+    "text": "Catalog description\nThis course provides a treatment of advanced topics in Data Science. Topics include: (i) Privacy and Ethics, (ii) Multivariate Statistics, (iii) Big Data and Cloud Computing, and (iv) Deep Learning. The course will draw from numerous case studies and applications, with a practical rather than theoretical emphasis."
+  },
+  {
+    "objectID": "syllabus.html#required-materials",
+    "href": "syllabus.html#required-materials",
+    "title": "Course Syllabus",
+    "section": "Required materials",
+    "text": "Required materials\n\nTextbook: The Hundred-Page Language Model Book (free online), plus readings provided in Canvas.\nTextbook: How to Argue and Win Every Time: At Home, at Work, in Court, Everywhere by Gerry Spence (used copies can be purchased very cheaply)\nTechnology: A computer for work outside lab (personal, Data Science program, or library checkout). If you need a laptop, consider Cal Poly Humboldt’s Reusable Office Supply Exchange (R.O.S.E.) program."
+  },
+  {
+    "objectID": "syllabus.html#course-load",
+    "href": "syllabus.html#course-load",
+    "title": "Course Syllabus",
+    "section": "Course load",
+    "text": "Course load\nDATA 422 has 3 units of lecture and 1 unit of activity. Expect about 5 hours in class and at least 7 hours out of class each week."
+  },
+  {
+    "objectID": "syllabus.html#assessment-and-grading",
+    "href": "syllabus.html#assessment-and-grading",
+    "title": "Course Syllabus",
+    "section": "Assessment and grading",
+    "text": "Assessment and grading\n\n\n\nComponent\nWeight\n\n\n\n\nQuizzes\n40%\n\n\nProject 1\n20%\n\n\nProject 2\n20%\n\n\nProject 3\n20%\n\n\n\n\nHow assessments work\n\nProject 3 is written in the university final-exam time slot (Friday, December 18, 10:20 a.m.–12:10 p.m., NR 224).\nLabs are ungraded Colab notebooks (objectives, syntax, demos, self-check exercises). They are not a grade.\n\nStepping stones are project checkpoints; they count toward the related project, not lab.\nWeekly quizzes are paper, in class, in the first 10 minutes of Friday lecture (15 points). They draw on that week’s lab, lecture, and assigned reading or videos. Study banks are on the site; Canvas is the reminder and the gradebook.\nLetter grades (nearest percent): 93–100 (A); 90–92 (A-); 87–89 (B+); 83–86 (B); 80–82 (B-); 77–79 (C+); 73–76 (C); 70–72 (C-); 60–69 (D); below 60 (F).\nSee Assessments for links as materials are posted."
+  },
+  {
+    "objectID": "syllabus.html#important-dates",
+    "href": "syllabus.html#important-dates",
+    "title": "Course Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nAugust 24\nClasses begin\n\n\nSeptember 7\nLabor Day (no class)\n\n\nNovember 11\nVeterans Day (no class)\n\n\nNovember 23–27\nFall break (no class)\n\n\nDecember 11\nLast class meeting\n\n\nDecember 18\nProject 3 presentations, 10:20 a.m.–12:10 p.m., NR 224\n\n\n\nSee the schedule for the week-by-week calendar."
+  },
+  {
+    "objectID": "syllabus.html#course-structure",
+    "href": "syllabus.html#course-structure",
+    "title": "Course Syllabus",
+    "section": "Course structure",
+    "text": "Course structure\nMeetings include discussions and small-group activities based on readings distributed beforehand. Projects practice applying course content. Typical project deliverables include shared code of ethics with reflection, a presentation (Project 3 / final slot), and a written report with code appendix—exact prompts will be posted under projects."
+  },
+  {
+    "objectID": "syllabus.html#missed-or-late-work",
+    "href": "syllabus.html#missed-or-late-work",
+    "title": "Course Syllabus",
+    "section": "Missed or late work",
+    "text": "Missed or late work\nQuizzes can be made up in Rosanna’s Office Hours. Project stepping stones or deliverables can be turned in late by making an arrangement with Rosanna. The only exceptions are the deliverables for projects 2 and 3, which will involve class participation for which there is no substitute."
+  },
+  {
+    "objectID": "syllabus.html#academic-integrity",
+    "href": "syllabus.html#academic-integrity",
+    "title": "Course Syllabus",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nStudents are responsible for knowing and abiding by Cal Poly Humboldt’s academic honesty policy. Students caught cheating will receive zero points and be reported to Student Judicial Affairs. Working in small groups on projects and when preparing for quizzes is encouraged, but work submitted for grading must be your own."
+  },
+  {
+    "objectID": "syllabus.html#ai-policy",
+    "href": "syllabus.html#ai-policy",
+    "title": "Course Syllabus",
+    "section": "AI policy",
+    "text": "AI policy\nYou may use AI (for example ChatGPT or Claude) to help you learn the materials, perform data analyses, or work on projects. For graded work completed outside class:\n\nIf you used AI, acknowledge it briefly in the document (name the service; detailed prompts are not required).\nYou are responsible for the correctness and appropriateness of everything you turn in (AI-assisted or not).\n\nThe instructor may use AI to improve course materials (for example checking whether an assignment is college-level or clarifying quiz wording). AI will not be used to grade your work, and AI detection tools will not be used to check your work."
+  },
+  {
+    "objectID": "syllabus.html#campus-policies-and-resources",
+    "href": "syllabus.html#campus-policies-and-resources",
+    "title": "Course Syllabus",
+    "section": "Campus policies and resources",
+    "text": "Campus policies and resources\nSyllabus addendum: campus resources and policies"
+  },
+  {
+    "objectID": "syllabus.html#learning-outcomes",
+    "href": "syllabus.html#learning-outcomes",
+    "title": "Course Syllabus",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nProgram / student learning outcomes (summary)\nStudents will demonstrate computational skills to extract and visualize data; statistical knowledge to build models and ensure valid analysis; contemporary data-oriented skills with ethical considerations; and effective communication for diverse audiences.\n\n\nCourse learning outcomes\nUpon successfully completing this course, you will be able to apply advanced data science methods and ethical reasoning in practical case studies spanning privacy, multivariate statistics, big data / cloud computing, and deep learning."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Lecture: Monday, Wednesday, Friday, 11:00–11:50 a.m., NR 224.\nLab: Tuesday, 11:00 a.m.–12:50 p.m., BSS 313.\nLater weeks will be posted here as we go.\n\n\n\nWeek\nMonday\nTuesday (lab — demo / practice, no points)\nWednesday\nFriday\n\n\n\n\n1\nAug 24Syllabus\nAug 25Lab 1: §1.3 logistic, sklearn/statsmodels, Sequential\nAug 26Wildfire motivation; model contracts; Ch 1: loss, gradients, training loop\nAug 28Ch 2: tokens, embeddings, likelihoodQuiz 1 (Ch 1 + Lab 1)\n\n\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\nTextbook and readings\n\nAndriy Burkov, The Hundred-Page Language Models Book (free online). Chapters are assigned on the schedule.\nSelected Karpathy Zero-to-Hero clips in weeks 1–2 (tiny autograd / makemore / GPT).\n\n\n\nComputing — Google Colab\nLabs run in Google Colab with your Cal Poly Humboldt Google account. Colab already has PyTorch.\nEach lab page has an Open in Colab badge and the .ipynb file. Notebooks are copied to the public course GitHub repo when the site is published so Colab can load them (the private source repo is not accessible to Colab).\n\n\n\n\n\n\nReuseCreative Commons Attribution-NonCommercial 4.0 International(View License)"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "href": "license.html#creative-commons-attribution-noncommercial-4.0-international-cc-by-nc-4.0",
+    "title": "License",
+    "section": "",
+    "text": "Unless otherwise noted, all materials on this website are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\n\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit to Dr. Rosanna Overholser, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\n\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\n\n\nWhen using or adapting these materials, please provide attribution in the following format:\n\nThis work is based on materials by Dr. Rosanna Overholser for DATA 422: Advanced Data Science Methods and Ethics, licensed under CC BY-NC 4.0.\n\n\n\n\nThe page-banner photograph, Best of Humboldt, is by Cal Poly Humboldt on Flickr and is all rights reserved. It is not covered by the CC BY-NC license for these course materials.\n\n\n\nRemixed materials will be noted with their original source and license. When remixing these materials, you must comply with both this license and the original source license.\n\n\n\nIf you have questions about using these materials or need clarification on the license terms, please contact Dr. Rosanna Overholser at rho3@humboldt.edu."
   }
 ]
